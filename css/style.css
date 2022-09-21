@@ -107,13 +107,13 @@ article{
 
 
 .separador{
-    background-image: url('../images/separador.png');
+    background-image: url('../images/separador.jpg');
     background-repeat: no-repeat;
     background-size: cover;
 }
 
 .separador2{
-    background-image: url('../images/portada2.png');
+    background-image: url('../images/portada2.jpg');
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -447,7 +447,7 @@ section nav ul{
 .fecha{
     height: 380px;
 
-    background-image: url(../images/separador.png);
+    background-image: url("../images/separador.jpg");
 
     display: grid;
     grid-template-columns: 1fr 0.5fr 1fr;
