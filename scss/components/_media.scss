@@ -1,0 +1,96 @@
+#discografia{
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+
+    grid-template-areas:
+    
+    "d1 d2"
+    "d3 d4"
+    ;
+    
+    .disk1{
+        grid-area: d1;
+    }
+    
+    .disk2{
+        grid-area: d2;
+    }
+    
+    .disk3{
+        grid-area: d3;
+    }
+    
+    .disk4{
+        grid-area: d4;
+    }
+}
+
+
+.disk1, .disk2, .disk3, .disk4{
+    border: 1px solid #000000;
+
+    margin: 1px;
+    padding: 10px 10px;
+
+    justify-content: center;
+    align-items: center;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+
+    grid-template-areas:
+    
+    "dalbum dtitle"
+    "ddesc difr"
+    ;
+}
+
+.d_title{
+    font-size: 24px;
+    text-shadow: 1px 1px 10px #050000;
+    font-style: ligth;
+
+    grid-area: dtitle;
+}
+
+.d_iframe{
+    grid-area: difr;
+}
+
+.d_desc{
+    grid-area: ddesc;
+}
+
+.d_album{
+    grid-area: dalbum;
+}
+
+#videos{
+    color: white;
+    font-family:'Roboto Condensed';
+
+    display: flex;
+    flex-direction: row;
+    
+    .vid{
+        padding: 5px 10px;
+        border: #000000 1px solid;
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
+        span{
+            width: 100%;
+        }
+        
+        div{
+            border-radius: 10px;
+            padding: 10px;
+            background-color: #0000008c;
+        }
+    }
+}

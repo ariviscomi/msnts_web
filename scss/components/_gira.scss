@@ -1,0 +1,56 @@
+.fecha{
+    height: 380px;
+
+    background-image: url("../images/separador.jpg");
+
+    display: grid;
+    grid-template-columns: 1fr 0.5fr 1fr;
+    grid-template-rows: 0.5fr 1fr 1fr;
+
+    grid-template-areas:
+    
+    "gtitle gtitle gtitle"
+    "gtext gtext gmap"
+    "gbtn gbtn gmap"
+    ;
+
+    .g_title{   
+        grid-area: gtitle;
+    
+        font-size: 30px;
+    }
+    
+    .g_map{
+        grid-area: gmap;
+    }
+    
+    .g_btn{   
+        grid-area: gbtn;
+    }
+    
+    .g_text{
+        padding: 20px;
+        background-color: #00000080;
+        border-radius: 20px;
+        font-size: 20px;
+    
+        flex-direction: column;
+        
+        text-align:justify;
+        
+        grid-area: gtext;
+        
+        p{
+            font-size: 20px;
+            width: 50%;
+        }
+    }
+    
+}
+
+.g_btn, .g_text, .g_map, .g_title{
+    display: flex;
+    align-items: center;
+    justify-content:center;
+}
+

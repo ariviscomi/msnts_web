@@ -101,7 +101,7 @@ article{
 
 .enfasis{
     font-style: italic;
-    text-shadow: 1px 1px 20px rgb(255, 255, 255);
+    text-shadow: 1px 1px 20px #ffffff;
     border-bottom: 2px solid #bd1818;
 }
 

@@ -1,0 +1,54 @@
+.latest{
+
+    width: 100%;
+
+    color: white;
+
+    display: grid;
+    grid-template-columns: 1fr 0.5fr 1fr;
+    grid-template-rows: 0.5fr 1fr 1fr;
+
+    grid-column-gap: 20px;
+    grid-row-gap: 10px;
+
+    grid-template-areas:
+
+    "ntitle ntitle ntitle"
+    "ndesc ndesc nimg"
+    "nlink nlink nimg"
+    ;
+    
+    .n_title{
+        grid-area: ntitle;
+    }
+    
+    .n_desc{
+        padding: 20px;
+        background-color: #00000080;
+        border-radius: 20px;
+        font-size: 20px;
+    
+        flex-direction: column;
+    
+        text-align:justify;
+    
+        grid-area: ndesc;
+    }
+    
+    .n_img{
+    
+        box-shadow: 1px 1px 10px #ffffff;
+        grid-area: nimg;
+    }
+    
+    .n_link{
+        grid-area: nlink;
+    }
+}
+
+.n_desc, .n_img, .n_link, .n_title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}

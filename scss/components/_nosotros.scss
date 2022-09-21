@@ -1,0 +1,89 @@
+#banda{
+    height: 500px;
+
+    .theBand{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 500px;
+        
+        .text{
+            position: relative;
+            z-index: 2;
+            bottom: 80px;
+            height: 80px;
+            width: 80%;
+            padding: 10px;
+            background-color: #00000085;
+        }
+    }
+    
+}
+
+#galeria img, #miembros img, #banda img{
+    border: 1px solid black;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.801);
+}
+
+#miembros{
+    font-family:'Roboto Condensed';
+    color: white;
+
+    margin: 50px 0;
+    display: flex;
+    justify-content: center;
+
+    .miembros{
+
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+    
+        grid-template-areas: 
+        "rulo vero ale"
+        "tirri ari caio"
+        ;
+    
+        grid-row-gap: 50px;
+        grid-column-gap: 50px;
+
+        span{
+            display:flex ;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .rulo{
+            grid-area: rulo;
+        }
+        
+        .ari{
+            grid-area: ari;
+        }
+        
+        .vero{
+            grid-area: vero;
+        }
+        
+        .ale{
+            grid-area: ale;
+        }
+        
+        .caio{
+            grid-area: caio;
+        }
+        
+        .tirri{
+            grid-area: tirri;
+        }
+    }
+}
+
+.galeria{
+    height: 500px;
+
+    font-size:x-large  ;
+    align-items: center;
+}
