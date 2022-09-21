@@ -1,0 +1,620 @@
+/* 
+#-------------------------------------------------------#
+#=====================|| GENERAL ||=====================#
+#-------------------------------------------------------#
+ */
+
+/*  PALETA DE COLORES:
+
+ Gris oscuro #1d1d1b
+ Gris        #3c3c3b
+ Gris claro  #9d9d9c
+ Rojo        #bd1818
+ Rojo oscuro #791710 
+ 
+ */
+
+
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+    font-family:'Roboto Condensed';
+
+    position: relative;
+    top: 110px;
+    background-image: linear-gradient( 110.3deg, #1d1d1b 10% , #bd1818 90%);
+    background-size: cover;
+}
+
+body a{
+    color: white;
+    text-decoration: none;
+    font-style: italic;
+}
+
+header{
+    height: 110px;
+    width: 100%;
+    padding-left: 5px;
+    padding-right: 5px;
+    
+    font-family:'Roboto Condensed';
+    font-style:normal;
+    font-size: 24px;
+    
+    background-color: #00000080;
+    align-items: center;
+    position: fixed;
+    top: 0px;
+    z-index: 4;
+    
+    display: flex;
+    justify-content: center;
+}
+
+ul li{
+    display: inline-block;
+    margin: 10px;
+}
+
+nav ul li a span{
+    align-items: center;
+}
+
+.title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #bd181888;
+    
+    height: 60px;
+    
+    font-family:'Roboto Condensed';
+    font-style:normal;
+    font-size: 32px;
+    color: white;
+    text-shadow: 1px 1px 10px #ffffff8c;
+    
+}
+
+.logo{
+    position: fixed;
+    z-index: 5;
+    left: 10px;
+    top: 20px;
+}
+
+article{
+    margin: 5px;
+    padding: 5px;
+    
+    border: 1px solid #8080807a;
+    
+    color: white;
+    
+    display: flex;
+    justify-content: center;
+}
+
+.enfasis{
+    font-style: italic;
+    text-shadow: 1px 1px 20px rgb(255, 255, 255);
+    border-bottom: 2px solid #bd1818;
+}
+
+
+.separador{
+    background-image: url('../images/separador.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.separador2{
+    background-image: url('../images/portada2.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+.backToUp{
+    position:fixed;
+    right: 0;
+    bottom: 25px;
+    z-index: 4;
+}
+
+footer{
+    border-top: 1px groove #0000007e;
+    background-color: #000000;
+    
+    font-family:'Roboto Condensed';
+    color: #ffffff;
+    
+    padding:10px 50px;
+
+}
+
+
+.all_footer{
+    height: 180px;
+    
+    display: grid;
+    grid-template-columns: repeat(1fr, 3);
+    grid-template-rows: repeat(1fr,3);
+
+    grid-template-areas:
+    
+    "title logo cachorro"
+    "nav logo cachorro"
+    "contact logo cachorro"
+    ;
+
+    grid-column-gap: 10%;
+}
+
+.all_footer .cachorro{
+
+    display: flex;
+    flex-direction: column;
+    justify-content:end;
+    align-items: flex-end;
+
+    grid-area: cachorro;
+}
+
+.all_footer .f_title{
+    grid-area: title;
+}
+
+.all_footer .f_nav{
+    grid-area: nav;
+}
+
+.all_footer .f_logo{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    grid-area: logo;
+}
+
+.all_footer .f_contact{
+    grid-area: contact;
+}
+
+.button{
+    height: 50px;
+    width: 200px;
+    
+    border: #bd1818 1px solid;
+    
+    border-radius: 3px;
+    box-shadow: 1px 1px 2px #bd1818;
+    background-image: linear-gradient(45deg, #bd1818 0%, #1d1d1b  40%, #bd1818  100%);
+}
+
+button span{
+    font-family:'Roboto Condensed';
+    color: #ffffff;
+    font-size: 22px; 
+    text-shadow: 1px 1px 5px #ffffff8c;
+}
+
+.credits{
+    background-color: #000000;
+    position: static;
+    right: 0;
+}
+
+.credits span{
+    color: #00000000;
+}
+
+/* 
+#-------------------------------------------------------#
+#======================|| INDEX ||======================#
+#-------------------------------------------------------#
+*/
+
+.carrusel{
+    
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    flex-direction: column;
+    
+    overflow: hidden;
+}
+
+.carrusel div{
+    height: 660px;
+}
+
+.social{
+    position:absolute;
+    z-index: 1;
+    bottom: 110px;
+}
+
+section nav ul{
+    border-bottom-left-radius: 5%;
+    border-top-left-radius: 5%;
+    border-bottom-right-radius: 5%;
+    border-top-right-radius: 5%;
+    background-color: rgba(0, 0, 0, 0.514);
+}
+
+.i_footer{
+    height: 80px;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    grid-template-areas: 
+    
+    "icontact icachorro"
+    ;
+}
+
+.i_footer .contac{
+    grid-area: icontact;
+}
+
+.cachorro{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+    grid-area: icachorro;
+
+    font-size: 8px;
+}
+
+
+
+/* 
+#-------------------------------------------------------#
+#====================|| NOVEDADES ||====================#
+#-------------------------------------------------------#
+*/
+.latest{
+
+    width: 100%;
+
+    color: white;
+
+    display: grid;
+    grid-template-columns: 1fr 0.5fr 1fr;
+    grid-template-rows: 0.5fr 1fr 1fr;
+
+    grid-column-gap: 20px;
+    grid-row-gap: 10px;
+
+    grid-template-areas:
+
+    "ntitle ntitle ntitle"
+    "ndesc ndesc nimg"
+    "nlink nlink nimg"
+    ;
+}
+
+.n_title{
+    display: flex;
+    justify-content: center;
+    grid-area: ntitle;
+}
+
+.n_desc{
+    padding: 20px;
+    background-color: #00000080;
+    border-radius: 20px;
+    font-size: 20px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-align:justify;
+
+    grid-area: ndesc;
+}
+
+.n_img{
+
+    box-shadow: 1px 1px 10px #ffffff;
+    grid-area: nimg;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.n_link{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-area: nlink;
+}
+
+/* 
+#------------------------------------------------------#
+#====================|| NOSOTROS ||====================#
+#------------------------------------------------------#
+*/
+
+#banda{
+    height: 500px;
+
+}
+
+.theBand{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 500px;
+}
+
+.theBand .text{
+    position: relative;
+    z-index: 2;
+    bottom: 80px;
+    height: 80px;
+    width: 80%;
+    padding: 10px;
+    background-color: #00000085;
+}
+
+#galeria img, #miembros img, #banda img{
+    border: 1px solid black;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.801);
+}
+
+#miembros{
+    font-family:'Roboto Condensed';
+    color: white;
+
+    margin: 50px 0;
+    display: flex;
+    justify-content: center;
+}
+
+.rulo span, .ale span, .ari span, .caio span, .tirri span, .vero span{
+
+    display:flex ;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.miembros{
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+
+    grid-template-areas: 
+    "rulo vero ale"
+    "tirri ari caio"
+    ;
+
+    grid-row-gap: 50px;
+    grid-column-gap: 50px;
+}
+
+.rulo{
+    grid-area: rulo;
+}
+
+.ari{
+    grid-area: ari;
+}
+
+.vero{
+    grid-area: vero;
+}
+
+.ale{
+    grid-area: ale;
+}
+
+.caio{
+    grid-area: caio;
+}
+
+.tirri{
+    grid-area: tirri;
+}
+
+.galeria{
+    height: 500px;
+
+    font-size:x-large  ;
+    align-items: center;
+}
+
+/* 
+#------------------------------------------------------#
+#======================|| GIRA ||======================#
+#------------------------------------------------------#
+*/
+
+.fecha{
+    height: 380px;
+
+    background-image: url(../images/separador.png);
+
+    display: grid;
+    grid-template-columns: 1fr 0.5fr 1fr;
+    grid-template-rows: 0.5fr 1fr 1fr;
+
+    grid-template-areas:
+    
+    "gtitle gtitle gtitle"
+    "gtext gtext gmap"
+    "gbtn gbtn gmap"
+    ;
+}
+
+.g_title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    grid-area: gtitle;
+
+    font-size: 30px;
+}
+
+.g_map{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    grid-area: gmap;
+}
+
+.g_btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    grid-area: gbtn;
+}
+
+.g_text{
+    padding: 20px;
+    background-color: #00000080;
+    border-radius: 20px;
+    font-size: 20px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
+
+    text-align:justify;
+
+    grid-area: gtext;
+}
+
+.g_text p{
+    font-size: 20px;
+    width: 50%;
+}
+
+/* 
+#------------------------------------------------------#
+#=====================|| MEDIA ||======================#
+#------------------------------------------------------#
+*/
+
+#discografia{
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+
+    grid-template-areas:
+    
+    "d1 d2"
+    "d3 d4"
+    ;
+}
+
+.disk1{
+    grid-area: d1;
+}
+
+.disk2{
+    grid-area: d2;
+}
+
+.disk3{
+    grid-area: d3;
+}
+
+.disk4{
+    grid-area: d4;
+}
+
+.disk1, .disk2, .disk3, .disk4{
+    color: white;
+    font-family:'Roboto Condensed';
+
+    border: 1px solid #000000;
+
+    margin: 1px;
+    padding: 10px 10px;
+
+    justify-content: center;
+    align-items: center;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+
+    grid-template-areas:
+    
+    "dalbum dtitle"
+    "ddesc difr"
+    ;
+}
+
+.d_title{
+    font-size: 24px;
+    text-shadow: 1px 1px 10px #050000;
+    font-style: ligth;
+
+    grid-area: dtitle;
+}
+
+.d_iframe{
+    grid-area: difr;
+}
+
+.d_desc{
+    grid-area: ddesc;
+}
+
+.d_album{
+    grid-area: dalbum;
+}
+
+#videos{
+    color: white;
+    font-family:'Roboto Condensed';
+
+    display: flex;
+    flex-direction: row;
+}
+
+.vid{
+    padding: 5px 10px;
+    border: #000000 1px solid;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.vid span{
+    width: 100%;
+}
+
+.vid div{
+    border-radius: 10px;
+    padding: 10px;
+    background-color: #0000008c;
+}
+
+/* 
+#-------------------------------------------------------#
+#=================|| @MEDIA QUERIES ||==================#
+#-------------------------------------------------------#
+*/
