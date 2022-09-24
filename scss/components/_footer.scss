@@ -1,6 +1,35 @@
 footer{
+    
+    display: grid;
+
     border-top: 1px groove #0000007e;
     background-color: #000000;
-        
+
     padding:10px 50px;
+
+    .cachorro{
+        display: flex;
+        flex-direction: column;
+        justify-content:end;
+        align-items: flex-end;
+    }
+
+    .i_footer{
+
+        height: 80px;
+
+        grid-template-columns: 1fr 1fr;
+        
+        grid-template-areas:
+        "icontacto icachorro"
+        ;
+
+        .contacto{
+            grid-area: icontacto;
+        }
+    
+        .cachorro{
+            grid-area: icachorro;
+        }
+    }
 }

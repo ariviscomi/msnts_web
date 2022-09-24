@@ -104,9 +104,27 @@ header {
 }
 
 footer {
+  display: grid;
   border-top: 1px groove rgba(0, 0, 0, 0.4941176471);
   background-color: #000000;
   padding: 10px 50px;
+}
+footer .cachorro {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  align-items: flex-end;
+}
+footer .i_footer {
+  height: 80px;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: "icontacto icachorro";
+}
+footer .i_footer .contacto {
+  grid-area: icontacto;
+}
+footer .i_footer .cachorro {
+  grid-area: icachorro;
 }
 
 .carrusel {
@@ -132,25 +150,6 @@ section nav ul {
   border-bottom-right-radius: 5%;
   border-top-right-radius: 5%;
   background-color: rgba(0, 0, 0, 0.514);
-}
-
-.i_footer {
-  height: 80px;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-areas: "icontact icachorro";
-}
-.i_footer .contac {
-  grid-area: icontact;
-}
-
-.cachorro {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  justify-content: center;
-  grid-area: icachorro;
-  font-size: 8px;
 }
 
 .fecha {
