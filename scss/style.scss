@@ -1,111 +1,11 @@
+@import "base/variables";
+
+@import "components/mediaQueries";
 @import "components/header";
+@import "components/footer";
 @import "components/index";
 @import "components/novedades";
 @import "components/nosotros";
 @import "components/gira";
 @import "components/media";
-@import "components/mediaQueries";
-@import "components/footer";
-
-body{
-    font-family:'Roboto Condensed';
-
-    color: white;
-
-    position: relative;
-    top: 110px;
-    background-image: linear-gradient( 110.3deg, #1d1d1b 10% , #bd1818 90%);
-    background-size: cover;
-
-    a{
-        color: white;
-        text-decoration: none;
-        font-style: italic;
-    }
-
-    ul{
-        li{
-            display: inline-block;
-            margin: 10px;
-
-            a{
-                span{
-                    align-items: center;
-                }
-            }
-        }
-    }
-
-    article{
-        margin: 5px;
-        padding: 5px;
-        
-        border: 1px solid #8080807a;
-                
-        display: flex;
-        justify-content: center;
-    }
-}
-
-.title{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #bd181888;
-    
-    height: 60px;
-    
-    font-size: 32px;
-    text-shadow: 1px 1px 10px #ffffff8c;
-    
-}
-
-.logo{
-    position: fixed;
-    z-index: 5;
-    left: 10px;
-    top: 20px;
-}
-
-.enfasis{
-    font-style: italic;
-    text-shadow: 1px 1px 20px #ffffff;
-    border-bottom: 2px solid #bd1818;
-}
-
-.separador{
-    background-image: url('../images/separador.jpg');
-}
-
-.separador2{
-    background-image: url('../images/portada2.jpg');
-}
-
-.separador, .separador2{
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-.backToUp{
-    position:fixed;
-    right: 0;
-    bottom: 25px;
-    z-index: 4;
-}
-
-.button{
-    height: 50px;
-    width: 200px;
-    
-    border: #bd1818 1px solid;
-    
-    border-radius: 3px;
-    box-shadow: 1px 1px 2px #bd1818;
-    background-image: linear-gradient(45deg, #bd1818 0%, #1d1d1b  40%, #bd1818  100%);
-    
-    span{
-        color: #ffffff;
-        font-size: 22px; 
-        text-shadow: 1px 1px 5px #ffffff8c;
-    }
-}
+@import "components/general";

@@ -13,6 +13,44 @@ header {
   justify-content: center;
 }
 
+footer {
+  border-top: 1px groove rgba(0, 0, 0, 0.4941176471);
+  background-color: #000000;
+  font-family: "Roboto Condensed";
+  color: #ffffff;
+  padding: 10px 50px;
+}
+footer .all_footer {
+  height: 180px;
+  display: grid;
+  grid-template-columns: repeat(1fr, 3);
+  grid-template-rows: repeat(1fr, 3);
+  grid-template-areas: "title logo cachorro" "nav logo cachorro" "contact logo cachorro";
+  grid-column-gap: 10%;
+}
+footer .all_footer .cachorro {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  align-items: flex-end;
+  grid-area: cachorro;
+}
+footer .all_footer .f_title {
+  grid-area: title;
+}
+footer .all_footer .f_nav {
+  grid-area: nav;
+}
+footer .all_footer .f_logo {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  grid-area: logo;
+}
+footer .all_footer .f_contact {
+  grid-area: contact;
+}
+
 .carrusel {
   display: flex;
   justify-content: center;
@@ -275,47 +313,9 @@ section nav ul {
   background-color: rgba(0, 0, 0, 0.5490196078);
 }
 
-footer {
-  border-top: 1px groove rgba(0, 0, 0, 0.4941176471);
-  background-color: #000000;
-  font-family: "Roboto Condensed";
-  color: #ffffff;
-  padding: 10px 50px;
-}
-footer .all_footer {
-  height: 180px;
-  display: grid;
-  grid-template-columns: repeat(1fr, 3);
-  grid-template-rows: repeat(1fr, 3);
-  grid-template-areas: "title logo cachorro" "nav logo cachorro" "contact logo cachorro";
-  grid-column-gap: 10%;
-}
-footer .all_footer .cachorro {
-  display: flex;
-  flex-direction: column;
-  justify-content: end;
-  align-items: flex-end;
-  grid-area: cachorro;
-}
-footer .all_footer .f_title {
-  grid-area: title;
-}
-footer .all_footer .f_nav {
-  grid-area: nav;
-}
-footer .all_footer .f_logo {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  grid-area: logo;
-}
-footer .all_footer .f_contact {
-  grid-area: contact;
-}
-
 body {
   font-family: "Roboto Condensed";
-  color: white;
+  color: #ffffff;
   position: relative;
   top: 110px;
   background-image: linear-gradient(110.3deg, #1d1d1b 10%, #bd1818 90%);
