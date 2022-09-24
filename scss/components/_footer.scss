@@ -1,57 +1,6 @@
 footer{
     border-top: 1px groove #0000007e;
     background-color: #000000;
-    
-    font-family:'Roboto Condensed';
-    color: #ffffff;
-    
+        
     padding:10px 50px;
-
-    .all_footer{
-        height: 180px;
-        
-        display: grid;
-        grid-template-columns: repeat(1fr, 3);
-        grid-template-rows: repeat(1fr,3);
-    
-        grid-template-areas:
-        
-        "title logo cachorro"
-        "nav logo cachorro"
-        "contact logo cachorro"
-        ;
-    
-        grid-column-gap: 10%;
-
-        .cachorro{
-
-            display: flex;
-            flex-direction: column;
-            justify-content:end;
-            align-items: flex-end;
-        
-            grid-area: cachorro;
-        }
-
-        .f_title{
-            grid-area: title;
-        }
-        
-        .f_nav{
-            grid-area: nav;
-        }
-        
-        .f_logo{
-            display: flex;
-            justify-content: flex-start;
-            align-items: center;
-        
-            grid-area: logo;
-        }
-        
-        .f_contact{
-            grid-area: contact;
-        }
-    }
-
 }
