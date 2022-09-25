@@ -12,7 +12,7 @@ body {
   background-size: cover;
 }
 body a {
-  color: white;
+  color: #ffffff;
   text-decoration: none;
   font-style: italic;
 }
@@ -26,7 +26,7 @@ body ul li a span {
 body article {
   margin: 5px;
   padding: 5px;
-  border: 1px solid rgba(128, 128, 128, 0.4784313725);
+  border: 1px solid rgba(60, 60, 59, 0.5);
   display: flex;
   justify-content: center;
 }
@@ -35,10 +35,10 @@ body article {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: rgba(189, 24, 24, 0.5333333333);
+  background-color: rgba(189, 24, 24, 0.5);
   height: 60px;
   font-size: 32px;
-  text-shadow: 1px 1px 10px rgba(255, 255, 255, 0.5490196078);
+  text-shadow: 1px 1px 10px rgba(255, 255, 255, 0.5);
 }
 
 .logo {
@@ -49,7 +49,6 @@ body article {
 }
 
 .enfasis {
-  font-style: italic;
   text-shadow: 1px 1px 20px #ffffff;
   border-bottom: 2px solid #bd1818;
 }
@@ -85,7 +84,7 @@ body article {
 .button span {
   color: #ffffff;
   font-size: 22px;
-  text-shadow: 1px 1px 5px rgba(255, 255, 255, 0.5490196078);
+  text-shadow: 1px 1px 5px rgba(255, 255, 255, 0.5);
 }
 
 header {
@@ -103,30 +102,6 @@ header {
   justify-content: center;
 }
 
-footer {
-  display: grid;
-  border-top: 1px groove rgba(0, 0, 0, 0.4941176471);
-  background-color: #000000;
-  padding: 10px 50px;
-}
-footer .cachorro {
-  display: flex;
-  flex-direction: column;
-  justify-content: end;
-  align-items: flex-end;
-}
-footer .i_footer {
-  height: 80px;
-  grid-template-columns: 1fr 1fr;
-  grid-template-areas: "icontacto icachorro";
-}
-footer .i_footer .contacto {
-  grid-area: icontacto;
-}
-footer .i_footer .cachorro {
-  grid-area: icachorro;
-}
-
 .carrusel {
   display: flex;
   justify-content: center;
@@ -134,14 +109,10 @@ footer .i_footer .cachorro {
   flex-direction: column;
   overflow: hidden;
 }
-.carrusel div {
-  height: 660px;
-}
-
-.social {
-  position: absolute;
+.carrusel .social {
+  position: relative;
   z-index: 1;
-  bottom: 110px;
+  bottom: 64px;
 }
 
 section nav ul {
@@ -368,6 +339,35 @@ section nav ul {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+footer {
+  height: 180px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: "cont cach";
+  border-top: 1px groove rgba(0, 0, 0, 0.4941176471);
+  background-image: url("../images/logo-blanco.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: #000000;
+  padding: 10px 50px;
+}
+footer .contacto {
+  grid-area: cont;
+}
+footer .cachorro {
+  grid-area: cach;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+}
+footer .cachorro .contCachorro {
+  width: 66px;
+}
+footer .cachorro .contCachorro span {
+  font-size: 10px;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -1,35 +1,40 @@
 footer{
-    
+    height: 180px;
+
     display: grid;
-
+    grid-template-columns: 1fr 1fr;
+    
+    grid-template-areas:
+    "cont cach"
+    ;
+    
     border-top: 1px groove #0000007e;
+    background-image: url("../images/logo-blanco.png");
+    background-repeat: no-repeat;
+    background-position: center;
     background-color: #000000;
-
+    
     padding:10px 50px;
+    
+    .contacto{
+        grid-area: cont;
+    }
 
     .cachorro{
+        grid-area: cach;
         display: flex;
         flex-direction: column;
-        justify-content:end;
+        justify-content:center;
         align-items: flex-end;
-    }
-
-    .i_footer{
-
-        height: 80px;
-
-        grid-template-columns: 1fr 1fr;
         
-        grid-template-areas:
-        "icontacto icachorro"
-        ;
+        .contCachorro{
 
-        .contacto{
-            grid-area: icontacto;
-        }
-    
-        .cachorro{
-            grid-area: icachorro;
+            width: 66px;
+            
+            span{
+                font-size: 10px;
+            }
         }
     }
+
 }
