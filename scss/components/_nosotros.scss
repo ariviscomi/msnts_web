@@ -9,6 +9,7 @@
         height: 500px;
         
         .text{
+            text-align: center;
             position: relative;
             z-index: 2;
             bottom: 80px;
@@ -34,6 +35,10 @@
     display: flex;
     justify-content: center;
 
+    a{
+        color: white;
+    }
+    
     .miembros{
 
         display: grid;

@@ -8,15 +8,13 @@ body{
 
     color: nth($paleta, 6);
 
-    position: relative;
-    top: 110px;
     background-image: linear-gradient( 110.3deg, nth($paleta, 1) 10% , nth($paleta, 4) 90%);
     background-size: cover;
 
-    a{
-        color: nth($paleta, 6);
-        text-decoration: none;
-        font-style: italic;
+    #inicio{
+        height: 110px;
+        background-color:linear-gradient( 110.3deg, nth($paleta, 4) 10% , nth($paleta, 1) 90%);
+        ;
     }
 
     ul{
@@ -56,16 +54,14 @@ body{
     
 }
 
-.logo{
-    position: fixed;
-    z-index: 5;
-    left: 10px;
-    top: 20px;
-}
-
 .enfasis{
     text-shadow: 1px 1px 20px nth($paleta, 6);
     border-bottom: 2px solid nth($paleta, 4);
+    font-style: italic;
+
+    a{
+        color: nth($paleta, 4);
+    }
 }
 
 .separador{
@@ -93,6 +89,7 @@ body{
     width: 200px;
     
     border: nth($paleta, 4) 1px solid;
+    text-decoration: none;
     
     border-radius: 3px;
     box-shadow: 1px 1px 2px nth($paleta, 4);
@@ -103,4 +100,10 @@ body{
         font-size: 22px; 
         text-shadow: 1px 1px 5px nth($paletaOp, 6);
     }
+}
+
+.enlace{
+    text-decoration-color: nth($paleta, 4);
+    color: white;
+    font-style: italic;
 }

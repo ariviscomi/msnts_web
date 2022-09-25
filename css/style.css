@@ -6,15 +6,12 @@
 body {
   font-family: "Roboto Condensed";
   color: #ffffff;
-  position: relative;
-  top: 110px;
   background-image: linear-gradient(110.3deg, #1d1d1b 10%, #bd1818 90%);
   background-size: cover;
 }
-body a {
-  color: #ffffff;
-  text-decoration: none;
-  font-style: italic;
+body #inicio {
+  height: 110px;
+  background-color: linear-gradient(110.3deg, #bd1818 10%, #1d1d1b 90%);
 }
 body ul li {
   display: inline-block;
@@ -41,16 +38,13 @@ body article {
   text-shadow: 1px 1px 10px rgba(255, 255, 255, 0.5);
 }
 
-.logo {
-  position: fixed;
-  z-index: 5;
-  left: 10px;
-  top: 20px;
-}
-
 .enfasis {
   text-shadow: 1px 1px 20px #ffffff;
   border-bottom: 2px solid #bd1818;
+  font-style: italic;
+}
+.enfasis a {
+  color: #bd1818;
 }
 
 .separador {
@@ -77,6 +71,7 @@ body article {
   height: 50px;
   width: 200px;
   border: #bd1818 1px solid;
+  text-decoration: none;
   border-radius: 3px;
   box-shadow: 1px 1px 2px #bd1818;
   background-image: linear-gradient(45deg, #bd1818 0%, #1d1d1b 40%, #bd1818 100%);
@@ -87,19 +82,37 @@ body article {
   text-shadow: 1px 1px 5px rgba(255, 255, 255, 0.5);
 }
 
+.enlace {
+  text-decoration-color: #bd1818;
+  color: white;
+  font-style: italic;
+}
+
 header {
   height: 110px;
   width: 100%;
-  padding-left: 5px;
-  padding-right: 5px;
+  padding: 0 5px;
   font-size: 24px;
-  background-color: rgba(0, 0, 0, 0.5019607843);
+  background-color: rgba(0, 0, 0, 0.6);
   align-items: center;
   position: fixed;
   top: 0px;
   z-index: 4;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-areas: "logo headerNav headerNav headerNav";
+}
+header .logo {
+  grid-area: logo;
+}
+header .headerNav {
+  grid-area: headerNav;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
+}
+header a {
+  text-decoration: none;
+  color: #ffffff;
 }
 
 .carrusel {
@@ -245,6 +258,7 @@ section nav ul {
   height: 500px;
 }
 #banda .theBand .text {
+  text-align: center;
   position: relative;
   z-index: 2;
   bottom: 80px;
@@ -265,6 +279,9 @@ section nav ul {
   margin: 50px 0;
   display: flex;
   justify-content: center;
+}
+#miembros a {
+  color: white;
 }
 #miembros .miembros {
   display: grid;
@@ -333,6 +350,7 @@ section nav ul {
 }
 .latest .n_link {
   grid-area: nlink;
+  text-decoration: none;
 }
 
 .n_desc, .n_img, .n_link, .n_title {
@@ -354,20 +372,25 @@ footer {
   padding: 10px 50px;
 }
 footer .contacto {
+  background-color: rgba(0, 0, 0, 0.3);
+  padding: 5px;
   grid-area: cont;
-}
-footer .cachorro {
-  grid-area: cach;
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+footer .cachorro {
+  background-color: rgba(0, 0, 0, 0.3);
+  padding: 5px;
+  grid-area: cach;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
   align-items: flex-end;
 }
-footer .cachorro .contCachorro {
-  width: 66px;
-}
-footer .cachorro .contCachorro span {
-  font-size: 10px;
+footer a {
+  color: #ffffff;
+  font-style: italic;
 }
 
 /*# sourceMappingURL=style.css.map */
