@@ -88,6 +88,20 @@ body article {
   font-style: italic;
 }
 
+.notPage {
+  height: 500px;
+  padding: 1% 5%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.notPage div {
+  text-shadow: 1px 1px 20px white;
+  padding: 10px;
+  margin: 10px;
+}
+
 header {
   height: 110px;
   width: 100%;
@@ -172,37 +186,6 @@ section nav ul {
   display: flex;
   align-items: center;
   justify-content: center;
-}
-
-#discografia {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
-  grid-template-areas: "d1 d2" "d3 d4";
-}
-#discografia .disk1 {
-  grid-area: d1;
-}
-#discografia .disk2 {
-  grid-area: d2;
-}
-#discografia .disk3 {
-  grid-area: d3;
-}
-#discografia .disk4 {
-  grid-area: d4;
-}
-
-.disk1, .disk2, .disk3, .disk4 {
-  border: 1px solid #000000;
-  margin: 1px;
-  padding: 10px 10px;
-  justify-content: center;
-  align-items: center;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
-  grid-template-areas: "dalbum dtitle" "ddesc difr";
 }
 
 .d_title {
