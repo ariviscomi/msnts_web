@@ -27,67 +27,88 @@
         
 </head>
 
-<body id="inicio" style="position: relative; top:0;">
-    <header>
-        <div class="logo">
-            <a href="./index.html">
-                <img src="./images/msnts_wh.png" 
-                    alt="MATAME Si No Te SIRVO | Logo de la banda">
-            </a>
-        </div>
-        <nav class="headerNav">
-            <ul>
-                <li class="navItem enfasis">
-                    <a href="./index.html">
-                        <span class="material-symbols-outlined">
-                            home
-                        </span>
-                    </a>
-                </li>
-                
-                <li class="navItem">
-                    <a href="./pages/novedades.html">
+<body id="inicio">
     
-                        <span>NOVEDADES</span>
-                    </a>
-                </li>
-    
-                <li class="navItem">
-                    <a href="./pages/nosotros.html">
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDarkDropdown"
+                aria-controls="navbarNavDarkDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDarkDropdown">
+                <ul class="navbar-nav">
+                    <li class="nav-item dropdown enfasis">
+                        <a 
+                            class="nav-link" 
+                            id="navbarDarkDropdownMenuLink"
+                            href="./index.html">
                             
-                        <span>NOSOTROS</span>
+                            <span class="material-symbols-outlined">
+                                home
+                            </span>
+                        </a>
+                    </li>
+    
+                    <li class="nav-item dropdown">
+                        <a 
+                            class="nav-link" 
+                            id="navbarDarkDropdownMenuLink"
+                            href="./pages/novedades.html">
+    
+                            <span>NOVEDADES</span>
+                        </a>
+                    </li>
+    
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="./pages/nosotros.html" id="navbarDarkDropdownMenuLink"
+                            role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            NOSOTROS
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
+                            <li><a class="dropdown-item" href="./pages/nosotros.html#banda">La Banda</a></li>
+                            <li><a class="dropdown-item" href="./pages/nosotros.html#miembros">Integrantes</a></li>
+                            <li><a class="dropdown-item" href="./pages/nosotros.html#galeria">Galeria</a></li>
+                        </ul>
+                    </li>
+    
+                    <li class="nav-item dropdown">
+                        <a 
+                            class="nav-link" 
+                            id="navbarDarkDropdownMenuLink"
+                            href="./pages/gira.html">
+    
+                            <span>GIRA!</span>
+    
+                        </a>
+                    </li>
+    
+                    <li class="nav-item dropdown">
+                        <a 
+                            class="nav-link" 
+                            id="navbarDarkDropdownMenuLink"
+                            href="./not-found/not-tienda.html">
+    
+                            <span>TIENDA</span>
+    
+                        </a>
+                    </li>
+    
+                    <li class="nav-item dropdown">
+                        <a 
+                            class="nav-link" 
+                            id="navbarDarkDropdownMenuLink"
+                            href="./pages/media.html">
+    
+                            <span>MEDIA</span>
                             <!-- Aqui ira un sub menu desplegable que linkee 
-                                a distintas partes de la pagina 'nosotros'-->
-                    </a>
-                </li>
-    
-                <li class="navItem">
-                    <a href="./pages/gira.html">
-    
-                        <span>GIRA!</span>
-    
-                    </a>
-                </li>
-    
-                <li class="navItem">
-                    <a href="./not-found/not-tienda.html">  
-                        
-                        <span>TIENDA</span>
-    
-                    </a>
-                </li>
-    
-                <li class="navItem">
-                    <a href="./pages/media.html">
-        
-                        <span>MEDIA</span>
-                            <!-- Aqui ira un sub menu desplegable que linkee 
-                                a distintas partes de la pagina 'media' -->
-                    </a>
-                </li>
-            </ul>
-        </nav>
-    </header>
+                                                                    a distintas partes de la pagina 'media' -->
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
 
     <main>
         <div id="carousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
@@ -128,7 +149,7 @@
             </button>
         </div>
     </main>
-    
+
     <footer>
         <div class="contacto">
             <h3>Contacto</h3>
@@ -223,4 +244,3 @@
 </body>
 </html>
 
-<!-- integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous" -->
