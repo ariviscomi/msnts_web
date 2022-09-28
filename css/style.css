@@ -214,7 +214,7 @@ section nav ul {
   flex-direction: row;
 }
 #videos .vid {
-  padding: 5px 10px;
+  padding: 5px 0px;
   border: #000000 1px solid;
   width: 50%;
   display: flex;
@@ -227,6 +227,7 @@ section nav ul {
 #videos .vid div {
   border-radius: 10px;
   padding: 10px;
+  margin: 0 10px;
   background-color: rgba(0, 0, 0, 0.5490196078);
 }
 
