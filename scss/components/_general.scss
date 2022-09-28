@@ -57,8 +57,6 @@ body{
 .enfasis{
     text-shadow: 1px 1px 20px nth($paleta, 6);
     border-bottom: 2px solid nth($paleta, 4);
-    font-style: italic;
-
     a{
         color: nth($paleta, 4);
     }

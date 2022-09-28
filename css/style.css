@@ -41,7 +41,6 @@ body article {
 .enfasis {
   text-shadow: 1px 1px 20px #ffffff;
   border-bottom: 2px solid #bd1818;
-  font-style: italic;
 }
 .enfasis a {
   color: #bd1818;
@@ -127,27 +126,6 @@ header .headerNav {
 header a {
   text-decoration: none;
   color: #ffffff;
-}
-
-.carrusel {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  overflow: hidden;
-}
-.carrusel .social {
-  position: relative;
-  z-index: 1;
-  bottom: 64px;
-}
-
-section nav ul {
-  border-bottom-left-radius: 5%;
-  border-top-left-radius: 5%;
-  border-bottom-right-radius: 5%;
-  border-top-right-radius: 5%;
-  background-color: rgba(0, 0, 0, 0.514);
 }
 
 .fecha {
@@ -344,6 +322,8 @@ section nav ul {
 }
 
 footer {
+  position: static;
+  bottom: 0;
   height: 180px;
   display: grid;
   grid-template-columns: 1fr 1fr;
