@@ -5,13 +5,12 @@
 
 body {
   font-family: "Roboto Condensed";
+  background-color: #1d1d1b;
   color: #ffffff;
   background-image: linear-gradient(110.3deg, #1d1d1b 10%, #bd1818 90%);
-  background-size: cover;
 }
 body #inicio {
   height: 110px;
-  background-color: linear-gradient(110.3deg, #bd1818 10%, #1d1d1b 90%);
 }
 body ul li {
   display: inline-block;
@@ -44,19 +43,6 @@ body article {
 }
 .enfasis a {
   color: #bd1818;
-}
-
-.separador {
-  background-image: url("../images/separador.jpg");
-}
-
-.separador2 {
-  background-image: url("../images/portada2.jpg");
-}
-
-.separador, .separador2 {
-  background-repeat: no-repeat;
-  background-size: cover;
 }
 
 .backToUp {
@@ -105,7 +91,7 @@ header {
   height: 110px;
   width: 100%;
   padding: 0 5px;
-  font-size: 24px;
+  font-size: 25px;
   background-color: rgba(0, 0, 0, 0.6);
   align-items: center;
   position: fixed;
@@ -324,35 +310,35 @@ header a {
 footer {
   position: static;
   bottom: 0;
+  width: 100%;
   height: 180px;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-areas: "cont cach";
   border-top: 1px groove rgba(0, 0, 0, 0.4941176471);
   background-image: url("../images/logo-blanco.png");
   background-repeat: no-repeat;
   background-position: center;
   background-color: #000000;
+}
+footer .fondo {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: "cont cach";
+  background-color: rgba(0, 0, 0, 0.5);
   padding: 10px 50px;
 }
-footer .contacto {
-  background-color: rgba(0, 0, 0, 0.3);
-  padding: 5px;
+footer .fondo .contacto {
   grid-area: cont;
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
-footer .cachorro {
-  background-color: rgba(0, 0, 0, 0.3);
-  padding: 5px;
+footer .fondo .cachorro {
   grid-area: cach;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
   align-items: flex-end;
 }
-footer a {
+footer .fondo a {
   color: #ffffff;
   font-style: italic;
 }

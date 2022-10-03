@@ -28,87 +28,66 @@
 </head>
 
 <body id="inicio">
-    
-    <nav class="navbar navbar-expand-lg">
-        <div class="container-fluid">
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDarkDropdown"
-                aria-controls="navbarNavDarkDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNavDarkDropdown">
-                <ul class="navbar-nav">
-                    <li class="nav-item dropdown enfasis">
-                        <a 
-                            class="nav-link" 
-                            id="navbarDarkDropdownMenuLink"
-                            href="./index.html">
-                            
-                            <span class="material-symbols-outlined">
-                                home
-                            </span>
-                        </a>
-                    </li>
-    
-                    <li class="nav-item dropdown">
-                        <a 
-                            class="nav-link" 
-                            id="navbarDarkDropdownMenuLink"
-                            href="./pages/novedades.html">
-    
-                            <span>NOVEDADES</span>
-                        </a>
-                    </li>
-    
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="./pages/nosotros.html" id="navbarDarkDropdownMenuLink"
-                            role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            NOSOTROS
-                        </a>
-                        <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
-                            <li><a class="dropdown-item" href="./pages/nosotros.html#banda">La Banda</a></li>
-                            <li><a class="dropdown-item" href="./pages/nosotros.html#miembros">Integrantes</a></li>
-                            <li><a class="dropdown-item" href="./pages/nosotros.html#galeria">Galeria</a></li>
-                        </ul>
-                    </li>
-    
-                    <li class="nav-item dropdown">
-                        <a 
-                            class="nav-link" 
-                            id="navbarDarkDropdownMenuLink"
-                            href="./pages/gira.html">
-    
-                            <span>GIRA!</span>
-    
-                        </a>
-                    </li>
-    
-                    <li class="nav-item dropdown">
-                        <a 
-                            class="nav-link" 
-                            id="navbarDarkDropdownMenuLink"
-                            href="./not-found/not-tienda.html">
-    
-                            <span>TIENDA</span>
-    
-                        </a>
-                    </li>
-    
-                    <li class="nav-item dropdown">
-                        <a 
-                            class="nav-link" 
-                            id="navbarDarkDropdownMenuLink"
-                            href="./pages/media.html">
-    
-                            <span>MEDIA</span>
-                            <!-- Aqui ira un sub menu desplegable que linkee 
-                                                                    a distintas partes de la pagina 'media' -->
-                        </a>
-                    </li>
-                </ul>
-            </div>
+    <header>
+        <div class="logo">
+            <a href="./index.html">
+                <img src="./images/msnts_wh.png" 
+                    alt="MATAME Si No Te SIRVO | Logo de la banda">
+            </a>
         </div>
-    </nav>
-
+        <nav class="headerNav">
+            <ul>
+                <li class="navItem enfasis">
+                    <a href="./index.html">
+                        <span class="material-symbols-outlined">
+                            home
+                        </span>
+                    </a>
+                </li>
+                
+                <li class="navItem">
+                    <a href="./pages/novedades.html">
+    
+                        <span>NOVEDADES</span>
+                    </a>
+                </li>
+    
+                <li class="navItem">
+                    <a href="./pages/nosotros.html">
+                            
+                        <span>NOSOTROS</span>
+                            <!-- Aqui ira un sub menu desplegable que linkee 
+                                a distintas partes de la pagina 'nosotros'-->
+                    </a>
+                </li>
+    
+                <li class="navItem">
+                    <a href="./pages/gira.html">
+    
+                        <span>GIRA!</span>
+    
+                    </a>
+                </li>
+    
+                <li class="navItem">
+                    <a href="./not-found/not-tienda.html">  
+                        
+                        <span>TIENDA</span>
+    
+                    </a>
+                </li>
+    
+                <li class="navItem">
+                    <a href="./pages/media.html">
+        
+                        <span>MEDIA</span>
+                            <!-- Aqui ira un sub menu desplegable que linkee 
+                                a distintas partes de la pagina 'media' -->
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
 
     <main>
         <div id="carousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
@@ -150,97 +129,100 @@
         </div>
     </main>
 
-    <footer>
-        <div class="contacto">
-            <h3>Contacto</h3>
-
-            <nav class="f_nav">
-                <ul>
-                    <li>
-                        <a href="https://www.instagram.com/matame.ok/" 
-                            target="_blank">
-                            
-                            <img height="32" width="32" 
-                                src="./images/instagram_wh.png" 
-                                    alt="Instagram">
-                        </a>
-                    </li>
-            
-                    <li>
-                        <a href="./not-found/not-spotify.html">
-                            
-                            <img height="32" width="32"
-                                src="./images/spotify_wh.png" 
-                                    alt="spotify">
-            
-                                    <!--SPOTIFY EN PROCESO-->
-                        </a>
-                    </li>
-                    
-                    <li>
-                        <a href="https://www.youtube.com/channel/UCwUbdMn5cLvECxIMFd8TRog" 
-                            target="_blank">
-                            
-                            <img height="32" width="32" 
-                                src="./images/youtube_wh.png" 
-                                    alt="Youtube">
-                        </a>
-                    </li>
-            
-                    <li>
-                        <a href="./not-found/not-soundcloud.html">
-                            
-                            <img height="32" width="32"
-                                src="./images/soundcloud_wh.png" 
-                                    alt="SoundCloud">
-            
-                                    <!--SOUNDCLOUD EN PROCESO-->
-                        </a>
-                    </li>
-                    
-                </ul>
-            </nav>
-
-            <a class="enlace"
-                href="https://mail.google.com/mail/u/0/#inbox?compose=CllgCJNsMWXRJMBWFnVfmGXqcmmbClrSPVhfLxRvXNkdfxMfFbvkgRLqrkJPMBTxBMCSKQrVRQV"
-                    target="_blank">
-                
-                <img height="16" width="16" 
-                    src="./images/send_wh.png"
-                        alt="Vinculo hacia la conversacion de mail con 
-                            la banda Matame si no te Sirvo"> 
-                        
-                        matamesinotesirvo.ok@gmail.com
-            </a>
     
-            <br>
-            
-            <a class="enlace" 
-                href="https://api.whatsapp.com/send?phone=541162056757" 
-                    target="_blank">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <footer>
+        <div class="fondo">
+            <div class="contacto">
+                <h3>Contacto</h3>
+    
+                <nav class="f_nav">
+                    <ul>
+                        <li>
+                            <a href="https://www.instagram.com/matame.ok/" 
+                                target="_blank">
+                                
+                                <img height="32" width="32" 
+                                    src="./images/instagram_wh.png" 
+                                        alt="Instagram">
+                            </a>
+                        </li>
                 
-                <img width="16" height="16"
-                    src="./images/whatsapp_wh.png" 
-                        alt="Numero de contacto que envia a la conversacion de whatsapp de Rulo Viscomi, 
-                            lider y cabeza de la banda Matame si no te Sirvo">
-                         +54 11 6205-6757
-            </a>
-        </div>
-
-        <div class="cachorro">
-            <div class="contCachorro">
-                <a href="https://www.instagram.com/cachorro_homestudio/" 
-                    target="_blank">
+                        <li>
+                            <a href="./not-found/not-spotify.html">
+                                
+                                <img height="32" width="32"
+                                    src="./images/spotify_wh.png" 
+                                        alt="spotify">
+                
+                                        <!--SPOTIFY EN PROCESO-->
+                            </a>
+                        </li>
+                        
+                        <li>
+                            <a href="https://www.youtube.com/channel/UCwUbdMn5cLvECxIMFd8TRog" 
+                                target="_blank">
+                                
+                                <img height="32" width="32" 
+                                    src="./images/youtube_wh.png" 
+                                        alt="Youtube">
+                            </a>
+                        </li>
+                
+                        <li>
+                            <a href="./not-found/not-soundcloud.html">
+                                
+                                <img height="32" width="32"
+                                    src="./images/soundcloud_wh.png" 
+                                        alt="SoundCloud">
+                
+                                        <!--SOUNDCLOUD EN PROCESO-->
+                            </a>
+                        </li>
+                        
+                    </ul>
+                </nav>
+    
+                <a class="enlace"
+                    href="https://mail.google.com/mail/u/0/#inbox?compose=CllgCJNsMWXRJMBWFnVfmGXqcmmbClrSPVhfLxRvXNkdfxMfFbvkgRLqrkJPMBTxBMCSKQrVRQV"
+                        target="_blank">
                     
-                    <img src="./images/logo-cachorro.png"
-                            alt="logo que vincula con el instagram de cachorro producciones. 
-                                Produccion musical de excelente calidad en zona oeste">
+                    <img height="16" width="16" 
+                        src="./images/send_wh.png"
+                            alt="Vinculo hacia la conversacion de mail con 
+                                la banda Matame si no te Sirvo"> 
+                            
+                            matamesinotesirvo.ok@gmail.com
+                </a>
+        
+                <br>
+                
+                <a class="enlace" 
+                    href="https://api.whatsapp.com/send?phone=541162056757" 
+                        target="_blank">
+                    
+                    <img width="16" height="16"
+                        src="./images/whatsapp_wh.png" 
+                            alt="Numero de contacto que envia a la conversacion de whatsapp de Rulo Viscomi, 
+                                lider y cabeza de la banda Matame si no te Sirvo">
+                             +54 11 6205-6757
                 </a>
             </div>
+    
+            <div class="cachorro">
+                <div class="contCachorro">
+                    <a href="https://www.instagram.com/cachorro_homestudio/" 
+                        target="_blank">
+                        
+                        <img src="./images/logo-cachorro.png"
+                                alt="logo que vincula con el instagram de cachorro producciones. 
+                                    Produccion musical de excelente calidad en zona oeste">
+                    </a>
+                </div>
+            </div>
+
         </div>
     </footer>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 </body>
 </html>
 

@@ -5,16 +5,13 @@
 
 body{
     font-family:'Roboto Condensed';
-
+    background-color:nth($paleta,1);
     color: nth($paleta, 6);
 
-    background-image: linear-gradient( 110.3deg, nth($paleta, 1) 10% , nth($paleta, 4) 90%);
-    background-size: cover;
+    background-image:linear-gradient( 110.3deg, nth($paleta, 1) 10% , nth($paleta, 4) 90%);
 
     #inicio{
         height: 110px;
-        background-color:linear-gradient( 110.3deg, nth($paleta, 4) 10% , nth($paleta, 1) 90%);
-        ;
     }
 
     ul{
@@ -60,19 +57,6 @@ body{
     a{
         color: nth($paleta, 4);
     }
-}
-
-.separador{
-    background-image: url('../images/separador.jpg');
-}
-
-.separador2{
-    background-image: url('../images/portada2.jpg');
-}
-
-.separador, .separador2{
-    background-repeat: no-repeat;
-    background-size: cover;
 }
 
 .backToUp{
