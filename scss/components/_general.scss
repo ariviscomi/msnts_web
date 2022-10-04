@@ -7,9 +7,11 @@ body{
     font-family:'Roboto Condensed';
     background-color:nth($paleta,1);
     color: nth($paleta, 6);
+    
+    background-image: linear-gradient(-45deg, nth($paleta,1) 10%, nth($paleta,4) 46%, nth($paleta,1) 100%);
 
-    background-image:linear-gradient( 110.3deg, nth($paleta, 1) 10% , nth($paleta, 4) 90%);
-
+/*     background-image:linear-gradient( 110.3deg, nth($paleta, 1) 10% , nth($paleta, 4) 90%);
+ */
     #inicio{
         height: 110px;
     }
@@ -43,6 +45,8 @@ body{
     justify-content: center;
     align-items: center;
     background-color: nth($paletaOp, 4);
+
+    border: 1px solid nth($paleta, 3);
     
     height: 60px;
     

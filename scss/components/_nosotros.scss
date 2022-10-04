@@ -37,6 +37,13 @@
 
     a{
         color: white;
+        font-size: 10px;
+
+        :hover{
+            color: nth($paleta, 6);
+            text-shadow:1px 1px 20px nth($paletaOp, 6);
+            text-decoration: nth($paleta, 1);
+        }
     }
     
     .miembros{

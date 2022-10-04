@@ -7,7 +7,9 @@ body {
   font-family: "Roboto Condensed";
   background-color: #1d1d1b;
   color: #ffffff;
-  background-image: linear-gradient(110.3deg, #1d1d1b 10%, #bd1818 90%);
+  background-image: linear-gradient(-45deg, #1d1d1b 10%, #bd1818 46%, #1d1d1b 100%);
+  /*     background-image:linear-gradient( 110.3deg, nth($paleta, 1) 10% , nth($paleta, 4) 90%);
+   */
 }
 body #inicio {
   height: 110px;
@@ -32,6 +34,7 @@ body article {
   justify-content: center;
   align-items: center;
   background-color: rgba(189, 24, 24, 0.5);
+  border: 1px solid #791710;
   height: 60px;
   font-size: 32px;
   text-shadow: 1px 1px 10px rgba(255, 255, 255, 0.5);
@@ -172,14 +175,16 @@ header a {
 }
 
 #videos {
+  margin: 5px;
   color: white;
   font-family: "Roboto Condensed";
   display: flex;
   flex-direction: row;
 }
 #videos .vid {
-  padding: 5px 0px;
+  padding: 0px;
   border: #000000 1px solid;
+  border-radius: 5px;
   width: 50%;
   display: flex;
   flex-direction: column;
@@ -230,6 +235,12 @@ header a {
 }
 #miembros a {
   color: white;
+  font-size: 10px;
+}
+#miembros a :hover {
+  color: #ffffff;
+  text-shadow: 1px 1px 20px rgba(255, 255, 255, 0.5);
+  text-decoration: #1d1d1b;
 }
 #miembros .miembros {
   display: grid;
