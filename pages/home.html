@@ -98,42 +98,43 @@
     </header>
 
     <main>
-        <div id="carousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
-            <div class="carousel-indicators">
-                <button type="button" data-bs-target="#carousel" data-bs-slide-to="0" class="active"
-                    aria-current="true" aria-label="Slide 1"></button>
-                <button type="button" data-bs-target="#carousel" data-bs-slide-to="1"
-                    aria-label="Slide 2"></button>
-                <button type="button" data-bs-target="#carousel" data-bs-slide-to="2"
-                    aria-label="Slide 3"></button>
+        <div class="home_main">
+            <div id="carousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carousel" data-bs-slide-to="0" class="active"
+                        aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carousel" data-bs-slide-to="1"
+                        aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carousel" data-bs-slide-to="2"
+                        aria-label="Slide 3"></button>
+                </div>
+                <div class="carousel-inner">
+    
+                    <div class="carousel-item active">
+                        <img src="../images/carrusel1.jpg" 
+                            class="d-block w-100"
+                            alt="">
+                    </div>
+    
+                    <div class="carousel-item">
+                        <img src="https://dummyimage.com/1080x550/791710/ffffff.jpg" class="d-block w-100" alt="...">
+                    </div>
+    
+                    <div class="carousel-item">
+                        <img src="https://dummyimage.com/1080x550/791710/ffffff.jpg" class="d-block w-100" alt="...">
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carousel"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Anterior</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carousel"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Siguiente</span>
+                </button>
             </div>
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <video
-                        class="d-block w-100"
-                        src="./images/portada_index.webm"
-                        autoplay
-                        loop
-                        title="Bienvenido a la Web de Matame si no te sirvo!">
-                    </video>
-                </div>
-                <div class="carousel-item">
-                    <img src="https://dummyimage.com/1080x550/9d9d9c/ffffff.jpg" class="d-block w-100" alt="...">
-                </div>
-                <div class="carousel-item">
-                    <img src="https://dummyimage.com/1080x550/791710/ffffff.jpg" class="d-block w-100" alt="...">
-                </div>
-            </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carousel"
-                data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Anterior</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carousel"
-                data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Siguiente</span>
-            </button>
         </div>
     </main>
     
@@ -150,16 +151,16 @@
                                 target="_blank">
                                 
                                 <img height="32" width="32" 
-                                    src="./images/instagram_wh.png" 
+                                    src="../images/instagram_wh.png" 
                                         alt="Instagram">
                             </a>
                         </li>
                 
                         <li>
-                            <a href="./not-found/not-spotify.html">
+                            <a href="../not-found/not-spotify.html">
                                 
                                 <img height="32" width="32"
-                                    src="./images/spotify_wh.png" 
+                                    src="../images/spotify_wh.png" 
                                         alt="spotify">
                 
                                         <!--SPOTIFY EN PROCESO-->
@@ -171,7 +172,7 @@
                                 target="_blank">
                                 
                                 <img height="32" width="32" 
-                                    src="./images/youtube_wh.png" 
+                                    src="../images/youtube_wh.png" 
                                         alt="Youtube">
                             </a>
                         </li>
@@ -180,7 +181,7 @@
                             <a href="./not-found/not-soundcloud.html">
                                 
                                 <img height="32" width="32"
-                                    src="./images/soundcloud_wh.png" 
+                                    src="../images/soundcloud_wh.png" 
                                         alt="SoundCloud">
                 
                                         <!--SOUNDCLOUD EN PROCESO-->
@@ -195,11 +196,13 @@
                         target="_blank">
                     
                     <img height="16" width="16" 
-                        src="./images/send_wh.png"
+                        src="../images/send_wh.png"
                             alt="Vinculo hacia la conversacion de mail con 
                                 la banda Matame si no te Sirvo"> 
                             
-                            matamesinotesirvo.ok@gmail.com
+                    <span>
+                        matamesinotesirvo.ok@gmail.com
+                    </span>
                 </a>
         
                 <br>
@@ -209,10 +212,13 @@
                         target="_blank">
                     
                     <img width="16" height="16"
-                        src="./images/whatsapp_wh.png" 
+                        src="../images/whatsapp_wh.png" 
                             alt="Numero de contacto que envia a la conversacion de whatsapp de Rulo Viscomi, 
                                 lider y cabeza de la banda Matame si no te Sirvo">
-                             +54 11 6205-6757
+                       
+                    <span>
+                        +54 11 6205-6757
+                    </span>
                 </a>
             </div>
     
@@ -221,7 +227,7 @@
                     <a href="https://www.instagram.com/cachorro_homestudio/" 
                         target="_blank">
                         
-                        <img src="./images/logo-cachorro.png"
+                        <img src="../images/logo-cachorro.png"
                                 alt="logo que vincula con el instagram de cachorro producciones. 
                                     Produccion musical de excelente calidad en zona oeste">
                     </a>

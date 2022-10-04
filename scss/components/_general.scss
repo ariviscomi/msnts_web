@@ -9,6 +9,7 @@ section, article,body,title{
 }
 
 html{
+    font-size: 62.5%;
 
     height:100%;
 }
@@ -37,13 +38,19 @@ body{
     }
 
     article{
-        margin: 5px;
         padding: 5px;
-        
-        border: 1px solid nth($paletaOp, 2);
-                
+                        
         display: flex;
         justify-content: center;
+    }
+    
+    a {
+        span{
+            &:hover{
+                text-shadow: 1px 1px 10px nth($paleta, 4), 2px 2px 20px nth($paleta, 6);
+                color: nth($paleta, 4);
+            }   
+        }
     }
 }
 
@@ -51,15 +58,21 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: nth($paletaOp, 1);
 
-    border: 1px solid nth($paleta, 3);
+    background-color: nth($paletaOp, 1);
+    background-image: url("../images/separador.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    border: 1px solid nth($paleta, 1);
     
     height: 60px;
     width: 100%;
-    font-size: 32px;
-    text-shadow: 1px 1px 10px nth($paletaOp, 6);
-    
+
+    h2{
+        text-shadow: 1px 1px 20px nth($paleta, 4);
+    }
 }
 
 .enfasis{
@@ -81,7 +94,7 @@ body{
     height: 50px;
     width: 200px;
     
-    border: nth($paleta, 4) 1px solid;
+    border: nth($paleta, 1) 1px solid;
     text-decoration: none;
     
     border-radius: 3px;
@@ -90,7 +103,7 @@ body{
     
     span{
         color: nth($paleta, 6);
-        font-size: 22px; 
+        font-size: 2.2rem; 
         text-shadow: 1px 1px 5px nth($paletaOp, 6);
     }
 }

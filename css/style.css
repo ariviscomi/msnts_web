@@ -8,6 +8,7 @@ section, article, body, title {
 }
 
 html {
+  font-size: 62.5%;
   height: 100%;
 }
 
@@ -28,11 +29,13 @@ body ul li a span {
   align-items: center;
 }
 body article {
-  margin: 5px;
   padding: 5px;
-  border: 1px solid rgba(60, 60, 59, 0.5);
   display: flex;
   justify-content: center;
+}
+body a span:hover {
+  text-shadow: 1px 1px 10px #bd1818, 2px 2px 20px #ffffff;
+  color: #bd1818;
 }
 
 .title {
@@ -40,11 +43,16 @@ body article {
   justify-content: center;
   align-items: center;
   background-color: rgba(29, 29, 27, 0.5);
-  border: 1px solid #791710;
+  background-image: url("../images/separador.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  border: 1px solid #1d1d1b;
   height: 60px;
   width: 100%;
-  font-size: 32px;
-  text-shadow: 1px 1px 10px rgba(255, 255, 255, 0.5);
+}
+.title h2 {
+  text-shadow: 1px 1px 20px #bd1818;
 }
 
 .enfasis {
@@ -65,7 +73,7 @@ body article {
 .button {
   height: 50px;
   width: 200px;
-  border: #bd1818 1px solid;
+  border: #1d1d1b 1px solid;
   text-decoration: none;
   border-radius: 3px;
   box-shadow: 1px 1px 2px #bd1818;
@@ -73,7 +81,7 @@ body article {
 }
 .button span {
   color: #ffffff;
-  font-size: 22px;
+  font-size: 2.2rem;
   text-shadow: 1px 1px 5px rgba(255, 255, 255, 0.5);
 }
 
@@ -101,13 +109,11 @@ header {
   height: 110px;
   width: 100%;
   padding: 0 5px;
-  font-size: 1.5rem;
   background-color: rgba(0, 0, 0, 0.6);
-  background-image: linear-gradient(175deg, #1d1d1b 60%, #bd1818 100%);
+  background-image: linear-gradient(175deg, #1d1d1b 40%, #bd1818 100%);
   align-items: center;
-  position: absolute;
-  top: 0px;
-  z-index: 4;
+  position: static;
+  top: 0;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-areas: "logo headerNav headerNav headerNav";
@@ -119,6 +125,9 @@ header .headerNav {
   grid-area: headerNav;
   display: flex;
   justify-content: flex-start;
+}
+header .headerNav .navItem span {
+  font-size: 2.4rem;
 }
 header a {
   text-decoration: none;
@@ -180,6 +189,10 @@ header a {
 
 .d_album {
   grid-area: dalbum;
+}
+
+p, a {
+  font-size: 1.6rem;
 }
 
 #videos {
@@ -319,7 +332,6 @@ header a {
   grid-area: ndesc;
 }
 .latest .n_img {
-  box-shadow: 1px 1px 10px #ffffff;
   grid-area: nimg;
 }
 .latest .n_link {
