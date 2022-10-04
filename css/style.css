@@ -3,13 +3,19 @@
   padding: 0;
 }
 
+section, article, body, title {
+  background-image: linear-gradient(-45deg, #1d1d1b 5%, #bd1818 50%, #1d1d1b 100%);
+}
+
+html {
+  height: 100%;
+}
+
 body {
+  height: 100%;
   font-family: "Roboto Condensed";
   background-color: #1d1d1b;
   color: #ffffff;
-  background-image: linear-gradient(-45deg, #1d1d1b 10%, #bd1818 46%, #1d1d1b 100%);
-  /*     background-image:linear-gradient( 110.3deg, nth($paleta, 1) 10% , nth($paleta, 4) 90%);
-   */
 }
 body #inicio {
   height: 110px;
@@ -33,9 +39,10 @@ body article {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: rgba(189, 24, 24, 0.5);
+  background-color: rgba(29, 29, 27, 0.5);
   border: 1px solid #791710;
   height: 60px;
+  width: 100%;
   font-size: 32px;
   text-shadow: 1px 1px 10px rgba(255, 255, 255, 0.5);
 }
@@ -94,10 +101,11 @@ header {
   height: 110px;
   width: 100%;
   padding: 0 5px;
-  font-size: 25px;
+  font-size: 1.5rem;
   background-color: rgba(0, 0, 0, 0.6);
+  background-image: linear-gradient(175deg, #1d1d1b 60%, #bd1818 100%);
   align-items: center;
-  position: fixed;
+  position: absolute;
   top: 0px;
   z-index: 4;
   display: grid;
@@ -232,6 +240,7 @@ header a {
   margin: 50px 0;
   display: flex;
   justify-content: center;
+  flex-direction: column;
 }
 #miembros a {
   color: white;
@@ -243,18 +252,24 @@ header a {
   text-decoration: #1d1d1b;
 }
 #miembros .miembros {
+  padding: 0 2rem;
+  width: 100%;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr;
   grid-template-areas: "rulo vero ale" "tirri ari caio";
-  grid-row-gap: 50px;
-  grid-column-gap: 50px;
+  grid-row-gap: 1rem;
+  grid-column-gap: 1rem;
 }
-#miembros .miembros span {
+#miembros .miembros span, #miembros .miembros .ale, #miembros .miembros .ari, #miembros .miembros .caio, #miembros .miembros .rulo, #miembros .miembros .tirri, #miembros .miembros .vero {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+#miembros .miembros span div, #miembros .miembros .ale div, #miembros .miembros .ari div, #miembros .miembros .caio div, #miembros .miembros .rulo div, #miembros .miembros .tirri div, #miembros .miembros .vero div {
+  padding: 0.5rem;
+  width: 33%;
 }
 #miembros .miembros .rulo {
   grid-area: rulo;

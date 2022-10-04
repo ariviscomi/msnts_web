@@ -3,15 +3,22 @@
     padding: 0;
 }
 
+section, article,body,title{
+    background-image: linear-gradient(-45deg, nth($paleta,1) 5%, nth($paleta,4) 50%, nth($paleta,1) 100%);
+
+}
+
+html{
+
+    height:100%;
+}
+
 body{
+    height:100%;
     font-family:'Roboto Condensed';
     background-color:nth($paleta,1);
     color: nth($paleta, 6);
     
-    background-image: linear-gradient(-45deg, nth($paleta,1) 10%, nth($paleta,4) 46%, nth($paleta,1) 100%);
-
-/*     background-image:linear-gradient( 110.3deg, nth($paleta, 1) 10% , nth($paleta, 4) 90%);
- */
     #inicio{
         height: 110px;
     }
@@ -44,12 +51,12 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: nth($paletaOp, 4);
+    background-color: nth($paletaOp, 1);
 
     border: 1px solid nth($paleta, 3);
     
     height: 60px;
-    
+    width: 100%;
     font-size: 32px;
     text-shadow: 1px 1px 10px nth($paletaOp, 6);
     
