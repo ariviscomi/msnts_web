@@ -9,16 +9,16 @@
     background-repeat: no-repeat;
     background-position: center;
     background-blend-mode: darken;
-}
-
-#carousel,.carousel-inner,.carousel-item{
-    height: 50rem;
-    width: 108rem;
-}
-
-.carousel-item{
-    img{
+    
+    #carousel,.carousel-inner,.carousel-item{
         height: 50rem;
         width: 108rem;
+    }
+    
+    .carousel-item{
+        img{
+            height: 50rem;
+            width: 108rem;
+        }
     }
 }

@@ -1,6 +1,20 @@
-@media (prefers-reduced-motion: no-preference) {
-  :root {
-    scroll-behavior: smooth;
+@media screen and (max-width: 1079px) {
+  .home_main {
+    width: 100vw;
+  }
+  .home_main #carousel, .home_main .carousel-inner, .home_main .carousel-item {
+    width: 80%;
+  }
+  .home_main .carousel-item img {
+    width: calc(100vw - 1rem);
+  }
+}
+@media screen and (max-width: 1010px) {
+  header {
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas: "logo logo logo" "headerNav headerNav headerNav";
   }
 }
 * {
@@ -107,9 +121,9 @@ body a span:hover {
 }
 
 header {
-  height: 110px;
-  width: 100%;
-  padding: 0 5px;
+  height: 11rem;
+  width: 100vw;
+  padding: 0 1rem;
   background-color: rgba(0, 0, 0, 0.6);
   background-image: linear-gradient(175deg, #1d1d1b 40%, #bd1818 100%);
   align-items: center;
@@ -146,13 +160,11 @@ header a {
   background-position: center;
   background-blend-mode: darken;
 }
-
-#carousel, .carousel-inner, .carousel-item {
+.home_main #carousel, .home_main .carousel-inner, .home_main .carousel-item {
   height: 50rem;
   width: 108rem;
 }
-
-.carousel-item img {
+.home_main .carousel-item img {
   height: 50rem;
   width: 108rem;
 }
@@ -401,8 +413,8 @@ p, a {
 footer {
   position: static;
   bottom: 0;
-  width: 100%;
-  height: 180px;
+  width: 100vw;
+  height: 18rem;
   border-top: 1px groove rgba(0, 0, 0, 0.4941176471);
   background-image: url("../images/logo-blanco.png");
   background-repeat: no-repeat;
@@ -414,7 +426,7 @@ footer .fondo {
   grid-template-columns: 1fr 1fr;
   grid-template-areas: "cont cach";
   background-color: rgba(0, 0, 0, 0.5);
-  padding: 10px 50px;
+  padding: 1rem 5rem;
 }
 footer .fondo .contacto {
   grid-area: cont;

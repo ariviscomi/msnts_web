@@ -3,8 +3,8 @@ footer{
     position: static;
     bottom: 0;
 
-    width: calc(100%);
-    height: 180px;
+    width: 100vw;
+    height: 18rem;
 
     
     border-top: 1px groove #0000007e;
@@ -23,7 +23,7 @@ footer{
         ;
         background-color: rgb(0, 0, 0,0.5);
         
-        padding:10px 50px;
+        padding:1rem 5rem;
 
         .contacto{
             grid-area: cont;
