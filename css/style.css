@@ -1,3 +1,8 @@
+@media (prefers-reduced-motion: no-preference) {
+  :root {
+    scroll-behavior: smooth;
+  }
+}
 * {
   margin: 0;
   padding: 0;
@@ -9,7 +14,6 @@ section, article, body, title {
 
 html {
   font-size: 62.5%;
-  height: 100%;
 }
 
 body {
@@ -17,9 +21,6 @@ body {
   font-family: "Roboto Condensed";
   background-color: #1d1d1b;
   color: #ffffff;
-}
-body #inicio {
-  height: 110px;
 }
 body ul li {
   display: inline-block;
@@ -132,6 +133,58 @@ header .headerNav .navItem span {
 header a {
   text-decoration: none;
   color: #ffffff;
+}
+
+.home_main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(60, 60, 59, 0.5);
+  background-image: url("../images/fondo.gif");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-blend-mode: darken;
+}
+
+#carousel, .carousel-inner, .carousel-item {
+  height: 50rem;
+  width: 108rem;
+}
+
+.carousel-item img {
+  height: 50rem;
+  width: 108rem;
+}
+
+main .section_form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 90vh;
+}
+main .section_form .block_form {
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 80%;
+  width: 40vw;
+  font-size: 2.2rem;
+  border: 1px solid rgba(29, 29, 27, 0.5);
+  background-color: #1d1d1b;
+  background-image: url("../images/fondo.gif");
+  background-size: contain;
+  background-repeat: repeat-y;
+  box-shadow: 1px 2px 20px black;
+}
+main .section_form .block_form form ul li {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  width: calc(100% - 2rem);
 }
 
 .fecha {

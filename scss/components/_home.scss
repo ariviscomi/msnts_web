@@ -1,0 +1,24 @@
+.home_main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: nth($paletaOp, 2);
+    background-image: url("../images/fondo.gif");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-blend-mode: darken;
+}
+
+#carousel,.carousel-inner,.carousel-item{
+    height: 50rem;
+    width: 108rem;
+}
+
+.carousel-item{
+    img{
+        height: 50rem;
+        width: 108rem;
+    }
+}

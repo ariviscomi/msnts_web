@@ -10,8 +10,6 @@ section, article,body,title{
 
 html{
     font-size: 62.5%;
-
-    height:100%;
 }
 
 body{
@@ -19,10 +17,6 @@ body{
     font-family:'Roboto Condensed';
     background-color:nth($paleta,1);
     color: nth($paleta, 6);
-    
-    #inicio{
-        height: 110px;
-    }
 
     ul{
         li{

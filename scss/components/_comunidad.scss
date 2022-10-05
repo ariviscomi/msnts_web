@@ -1,0 +1,43 @@
+main{
+    .section_form{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+        height: 90vh;
+
+        .block_form{
+            padding:2rem;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+
+            height: 80%;
+            width: 40vw;
+
+            font-size: 2.2rem;
+
+            border: 1px solid nth($paletaOp, 1);
+            background-color: nth($paleta, 1);
+            background-image: url("../images/fondo.gif");
+            background-size: contain;
+            background-repeat: repeat-y;
+            box-shadow: 1px 2px 20px black;
+
+            form{
+                ul{
+                    li {
+                        display: flex;
+                        align-items:flex-start;
+                        flex-direction: column;
+                        width: calc(100% - 2rem);
+                    }
+                }
+            }
+        }
+
+    }
+}
