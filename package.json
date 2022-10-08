@@ -16,9 +16,9 @@
   },
   "homepage": "https://github.com/ariviscomi/msnts_web#readme",
   "dependencies": {
+    "animate.css": "^4.1.1",
     "node-sass": "^7.0.3",
     "nodemon": "^2.0.20"
   },
-  "devDependencies": {},
   "description": ""
 }

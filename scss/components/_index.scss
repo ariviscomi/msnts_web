@@ -1,0 +1,13 @@
+main{
+    #index{
+
+        .enterArrow {
+    
+            color: white;
+            position: absolute;
+            z-index: 2;
+            top: calc(100vh - 2rem);
+            left: calc(50vw - 4.5rem);
+        }
+    }
+}

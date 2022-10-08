@@ -1,31 +1,73 @@
 header{
     height: 11rem;
-    width: 100vw;
     padding: 0 1rem;
-    
+
     background-color: rgba(0, 0, 0, 0.6);
     background-image: linear-gradient(175deg, nth($paleta,1) 40%, nth($paleta,4) 100%);
     align-items: center;
-    
-    position: static;
-    top: 0;
-    
     display: grid;
-    grid-template-columns: repeat(4,1fr);
+    grid-template-columns: 0.5fr 1fr 1fr 1fr 1fr;
 
     grid-template-areas:
-    "logo headerNav headerNav headerNav"
+    "logo headerNav headerNav headerNav headerNav"
     ;
 
     .logo{
         grid-area: logo;
     }
 
+    .burger{
+
+        grid-area: burger;
+        
+        z-index: 3;
+        ul{
+            position:absolute;
+            left: 0;
+            height: 100vh;
+            width: 33.3vw;
+            display: none;
+            padding: 0;
+            background: nth($paleta, 1);
+
+            li {
+              display: block;
+              margin: 0;
+              padding: 1rem;
+              list-style: none;
+              border-bottom: 1px solid black;
+            }
+          }
+          
+          input:checked  ~ ul{
+            display:block;
+          }
+
+          input {
+            display: none;
+          }
+
+          label {
+            box-sizing: border-box;
+            display: inline-block;
+            border: 1px solid black;
+            background-color: nth($paletaOp, 1);
+            border-radius: 5px;
+            width: 3.2rem;
+            height: 3.2rem;
+            line-height: 3.2rem;
+            font-weight: 3rem;
+            text-align: center;
+            user-select: none;
+          }
+
+    }
+
     .headerNav{
         grid-area: headerNav;
 
         display: flex;
-        justify-content: flex-start;
+        justify-content: center;
 
         .navItem{
             span{

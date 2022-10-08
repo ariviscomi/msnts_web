@@ -1,9 +1,7 @@
 @import "base/variables";
 @import "base/maps";
 
-@import "components/mediaQueries";
 @import "components/general";
-@import "components/header";
 @import "components/index";
 @import "components/home";
 @import "components/comunidad";
@@ -11,4 +9,6 @@
 @import "components/media";
 @import "components/nosotros";
 @import "components/novedades";
+@import "components/header";
 @import "components/footer";
+@import "components/mediaQueries";
