@@ -1,54 +1,10 @@
-@media screen and (max-width: 1079px){
-
-    .home_main{
-        width: calc(100vw);
-        #carousel,.carousel-inner,.carousel-item{
-            width: calc(99%);
-            height: auto;
-        }
-        
-        .carousel-item{ 
-            img{
-                width: auto;
-                height: auto;
-            }
-        }
-    }
-}
-
-@media screen and (max-width: 1010px){
+/* Extra small devices (phones, 600px and down) */
+@media screen and (max-width: 600px) {
     
-    header{
-        display: grid;
-        grid-template-rows: repeat(2, 1fr);
-        grid-template-columns: repeat(5,1fr);
-        grid-template-areas:
-            "logo logo logo logo logo" 
-            "headerNav headerNav headerNav headerNav headerNav"
-        ;
-
-        div{
-            display: flex;
-            justify-content: center;
-        }
-    }
 }
 
-@media screen and (min-width: 760px){
-
-    header{
-        .header_logoSmall{
-            display: none;
-        }
-
-        .burger{
-            display: none;
-        }
-    }
-}
-
-@media screen and (max-width: 760px){
-
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media screen and (max-width: 768px) {
     header{
         display: grid;
         grid-template-rows: 1fr;
@@ -103,3 +59,41 @@
         }
     }
 }
+
+/* Intercambio de logo */
+@media screen and (min-width: 760px){
+
+    header{
+        .header_logoSmall{
+            display: none;
+        }
+
+        .burger{
+            display: none;
+        }
+    }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media screen and (max-width: 1000px) {
+    header{
+        display: grid;
+        grid-template-rows: repeat(2, 1fr);
+        grid-template-columns: repeat(5,1fr);
+        grid-template-areas:
+            "logo logo logo logo logo" 
+            "headerNav headerNav headerNav headerNav headerNav"
+        ;
+
+        div{
+            display: flex;
+            justify-content: center;
+        }
+    }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media screen and (min-width: 1010px) {
+    
+}
+
