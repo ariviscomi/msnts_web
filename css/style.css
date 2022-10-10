@@ -10,6 +10,9 @@ section, article, body, title {
 html {
   font-size: 62.5%;
 }
+html ::-webkit-scrollbar {
+  display: none;
+}
 
 body {
   display: grid;
@@ -107,34 +110,6 @@ main {
   text-shadow: 1px 1px 20px white;
   padding: 10px;
   margin: 10px;
-}
-
-main #index .enterArrow {
-  color: white;
-  position: absolute;
-  z-index: 2;
-  top: calc(100vh - 2rem);
-  left: calc(50vw - 4.5rem);
-}
-
-.home_main {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: rgba(60, 60, 59, 0.5);
-  background-image: url("../images/fondo.gif");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-blend-mode: darken;
-}
-.home_main #carousel, .home_main .carousel-inner, .home_main .carousel-item {
-  height: 55rem;
-  width: 108rem;
-}
-.home_main .carousel-item img {
-  height: 55rem;
-  width: 108rem;
 }
 
 main .section_form {
@@ -377,6 +352,54 @@ p, a {
   align-items: center;
 }
 
+#homePage .noneDisplay {
+  display: none;
+}
+#homePage #index {
+  position: absolute;
+  z-index: 4;
+  width: calc(100vw - 1.67rem);
+  height: 100vh;
+  --animation-duration:3.5s;
+  padding: 0;
+  margin: 0;
+}
+#homePage #index input {
+  display: none;
+}
+#homePage #index .indexVideo {
+  position: absolute;
+  z-index: 5;
+  height: auto;
+  width: 100vw;
+}
+#homePage #index .swipeContainer {
+  position: absolute;
+  z-index: 6;
+  bottom: 10rem;
+  left: calc(50vw - 4.5rem);
+  --animate-duration: 3.5s;
+}
+#homePage main .home_main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(60, 60, 59, 0.5);
+  background-image: url("../images/fondo.gif");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-blend-mode: darken;
+}
+#homePage main .home_main #carousel, #homePage main .home_main .carousel-inner, #homePage main .home_main .carousel-item {
+  height: 55rem;
+  width: 108rem;
+}
+#homePage main .home_main .carousel-item img {
+  height: 55rem;
+  width: 108rem;
+}
+
 header {
   height: 11rem;
   padding: 0 1rem;
@@ -447,7 +470,7 @@ footer {
   border-top: 1px groove rgba(0, 0, 0, 0.4941176471);
   background-image: url("../images/logo-blanco.png");
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: top;
   background-color: #000000;
 }
 footer .fondo {
