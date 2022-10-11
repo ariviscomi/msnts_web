@@ -1,15 +1,11 @@
 #homePage{
 
-    .noneDisplay{
-        display: none;
-    }
-    
+    overflow-x: hidden;
 
     #index{
         display: flex;
         justify-content: center;
         overflow:hidden;
-        overflow-block:initial;
 
         position: absolute;
         z-index: 4;
@@ -28,13 +24,16 @@
         .indexVideo{
             position: absolute;
             z-index: 5;
-            height:calc(100vh);
+            min-height:calc(100vh);
+            overflow: hidden;
+
         }
         
         .swipeContainer{
             position: absolute;
             z-index: 6;
     
+            width: 7rem;
             bottom: 10rem;
             left: calc(50vw - 4.5rem);
             --animate-duration: 3.5s;

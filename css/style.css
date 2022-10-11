@@ -9,7 +9,7 @@ section, article, body, title {
 
 html {
   font-size: 62.5%;
-  width: 100vw;
+  max-width: 100%;
 }
 html ::-webkit-scrollbar {
   display: none;
@@ -19,7 +19,7 @@ body {
   display: grid;
   grid-template-rows: auto 1fr auto;
   min-height: 100vh;
-  width: 100vw;
+  max-width: 100%;
   font-family: "Roboto Condensed";
   background-color: #1d1d1b;
   color: #ffffff;
@@ -348,14 +348,13 @@ p, a {
   align-items: center;
 }
 
-#homePage .noneDisplay {
-  display: none;
+#homePage {
+  overflow-x: hidden;
 }
 #homePage #index {
   display: flex;
   justify-content: center;
   overflow: hidden;
-  overflow-block: initial;
   position: absolute;
   z-index: 4;
   width: 100vw;
@@ -370,11 +369,13 @@ p, a {
 #homePage #index .indexVideo {
   position: absolute;
   z-index: 5;
-  height: 100vh;
+  min-height: 100vh;
+  overflow: hidden;
 }
 #homePage #index .swipeContainer {
   position: absolute;
   z-index: 6;
+  width: 7rem;
   bottom: 10rem;
   left: calc(50vw - 4.5rem);
   --animate-duration: 3.5s;
@@ -404,22 +405,22 @@ header {
   padding: 0 1rem;
   background-color: rgba(0, 0, 0, 0.6);
   background-image: linear-gradient(175deg, #1d1d1b 40%, #bd1818 100%);
-  align-items: center;
   display: grid;
-  grid-template-columns: 0.5fr 1fr 1fr 1fr 1fr;
-  grid-template-areas: "logo headerNav headerNav headerNav headerNav";
+  align-items: center;
+  grid-template-columns: 0.2fr 1fr;
+  grid-template-areas: "logo headerNav";
 }
 header .logo {
   grid-area: logo;
 }
 header .burger {
-  grid-area: burger;
-  z-index: 3;
+  position: absolute;
+  left: 0;
 }
 header .burger ul {
   position: absolute;
   left: 0;
-  height: 100vh;
+  height: 99vh;
   width: 33.3vw;
   display: none;
   padding: 0;
@@ -431,6 +432,12 @@ header .burger ul li {
   padding: 1rem;
   list-style: none;
   border-bottom: 1px solid black;
+}
+header .burger ul .about {
+  position: absolute;
+  bottom: 0;
+  font-size: 2px !important;
+  border-top: 1px solid rgba(0, 0, 0, 0.5);
 }
 header .burger input:checked ~ ul {
   display: block;
@@ -504,26 +511,28 @@ footer .fondo a {
   }
 }
 /* Small devices (portrait tablets and large phones, 600px and up) */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 760px) {
   body {
-    max-width: 768px;
+    max-width: 760px;
   }
-  body header {
-    display: grid;
-    grid-template-rows: 1fr;
-    grid-template-columns: 0.8fr 1fr;
-    grid-template-areas: "burger logo";
+  body #head, body header {
+    grid-template-columns: 0.1fr 1fr;
+    grid-template-areas: "burger logo" "burger logo";
   }
-  body header .logo {
-    justify-content: flex-start;
+  body #head .logo, body header .logo {
+    grid-area: logo;
   }
-  body header .header_logoBig {
+  body #head .burger, body header .burger {
+    z-index: 3;
+    grid-area: burger;
+  }
+  body #head .header_logoBig, body header .header_logoBig {
     display: none;
   }
-  body header .headerNav {
+  body #head .headerNav, body header .headerNav {
     display: none;
   }
-  body header .animate__FadeInLeft {
+  body #head .animate__FadeInLeft, body header .animate__FadeInLeft {
     animation: alternate-reverse;
   }
   body footer .fondo {
@@ -539,6 +548,7 @@ footer .fondo a {
     justify-content: center;
   }
   body footer .fondo .cachorro {
+    visibility: hidden;
     justify-content: center;
     align-items: center;
   }
@@ -558,16 +568,36 @@ footer .fondo a {
     max-width: 1000px;
   }
   body header {
-    display: grid;
     grid-template-rows: repeat(2, 1fr);
-    grid-template-columns: repeat(5, 1fr);
-    grid-template-areas: "logo logo logo logo logo" "headerNav headerNav headerNav headerNav headerNav";
+    grid-template-columns: 1fr;
+    grid-template-areas: "logo" "headerNav";
   }
   body header div {
     display: flex;
     justify-content: center;
   }
+  body .home_main {
+    display: flex;
+    justify-content: center;
+  }
+  body .home_main #carousel, body .home_main .carousel-inner, body .home_main .carousel-item {
+    max-width: calc(100vw - 5rem);
+    height: auto;
+  }
 }
 /* Large devices (laptops/desktops, 992px and up) */
+@media screen and (min-width: 1010px) {
+  body {
+    min-width: 1010px;
+  }
+  body #index {
+    min-width: 100vw;
+    min-height: 100vh;
+  }
+  body #index .indexVideo {
+    height: 100%;
+    min-width: 100%;
+  }
+}
 
 /*# sourceMappingURL=style.css.map */
