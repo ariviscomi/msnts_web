@@ -4,6 +4,10 @@ header {
 
   background-color: rgba(0, 0, 0, 0.6);
   background-image: linear-gradient(175deg, nth($paleta, 1) 40%, nth($paleta, 4) 100%);
+  border-bottom: 1px solid nth($paleta, 1);
+  box-shadow: 1px 1px 10px nth($paleta, 1);
+  margin-bottom: 1rem;
+
   display: grid;
   align-items:center ;
   grid-template-columns: 0.2fr 1fr;
@@ -18,7 +22,7 @@ header {
 
   .burger {
     position: absolute;
-    left: 0;
+    left: 0.2rem;
     ul {
       position: absolute;
       left: 0;

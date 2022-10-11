@@ -1,74 +1,97 @@
-/* Extra small devices (phones, 600px and down) */
+
 @media screen and (max-width: 600px) {
-    body{
-        max-width: 600px;
+    html{
+        font-size: 50%;
+
+        body{
+            max-width: 600px;
+        }
     }
 }
 
-/* Small devices (portrait tablets and large phones, 600px and up) */
-@media screen and (max-width: 760px) {
+@media screen and (max-width: 761px) {
 
-    body{
-        max-width: 760px;
-
-        #head,header{
-
-            grid-template-columns: 0.1fr 1fr;
-            grid-template-areas:
-            
-            "burger logo"
-            "burger logo" 
-            ;
-
-            .logo{
-
-                grid-area: logo;
-            }
-
-            .burger{
-                z-index: 3;
-                grid-area: burger;
-            }
-
-            .header_logoBig{
-                display: none;
-            }
+    html{
+        font-size: 56%;
+        body{
+            max-width: 760px;
     
-            .headerNav{
-                display: none;
-            }
+            #head,header{
     
-            .animate__FadeInLeft{
-                animation:alternate-reverse;
-            }
-        }
-    
-        footer{
-            .fondo{
-    
-                font-size: 50%;
-                display: grid;
-                grid-template-columns: 1fr;
-                grid-template-rows: 1fr 0.2fr;
-                
+                grid-template-columns: 0.1fr 1fr;
                 grid-template-areas:
-                "cont"
-                "cach"
+                
+                "burger logo"
+                "burger logo" 
                 ;
     
-                row-gap: 1rem;
+                .logo{
     
-                .contacto{
-                    nav,a{
-                        display:flex;
-                        justify-content: center;
-                    }
+                    grid-area: logo;
                 }
+    
+                .burger{
+                    z-index: 3;
+                    grid-area: burger;
+                }
+    
+                .header_logoBig{
+                    display: none;
+                }
+        
+                .headerNav{
+                    display: none;
+                }
+        
+                .animate__FadeInLeft{
+                    animation:alternate-reverse;
+                }
+            }
+
+            #miembros{
             
-                .cachorro{
-                    visibility: hidden;
-                    justify-content:center;
-                    align-items: center; 
+                .miembros {
+                    grid-template-columns: 1fr;
+                    grid-template-rows: repeat(6,1fr);
+        
+                    grid-template-areas:
+                        "rulo"
+                        "vero"
+                        "ale" 
+                        "tirri"
+                        "ari" 
+                        "caio"
+                    ;
+                }
+            }
+        
+            footer{
+                .fondo{
+        
+                    font-size: 50%;
+                    display: grid;
+                    grid-template-columns: 1fr;
+                    grid-template-rows: 1fr 0.2fr;
+                    
+                    grid-template-areas:
+                    "cont"
+                    "cach"
+                    ;
+        
+                    row-gap: 1rem;
+        
+                    .contacto{
+                        nav,a{
+                            display:flex;
+                            justify-content: center;
+                        }
+                    }
+                
+                    .cachorro{
+                        visibility: hidden;
+                        justify-content:center;
+                        align-items: center; 
+                    }
                 }
             }
         }
@@ -76,7 +99,7 @@
 }
 
 /* Intercambio de logo */
-@media screen and (min-width: 760px){
+@media screen and (min-width: 761px){
 
     header{
         .header_logoSmall{
@@ -89,7 +112,6 @@
     }
 }
 
-/* Medium devices (landscape tablets, 768px and up) */
 @media screen and (max-width: 1000px){
 
     body{
@@ -118,10 +140,37 @@
                 height: auto;
             }
         }
+
+        .latest {
+            height: max-content;
+            grid-template-columns:1fr;
+            grid-template-rows: auto auto auto;
+
+            grid-template-areas:
+    
+                "ntitle"
+                "nimg"
+                "ndesc"
+                "nlink"
+            ;
+        }
+        
+        #miembros{
+            
+            .miembros {
+                grid-template-columns: repeat(2,1fr);
+                grid-template-rows: repeat(3,1fr);
+    
+                grid-template-areas:
+                    "rulo vero"
+                    "ale tirri"
+                    "ari caio"
+                ;
+            }
+        }
     }
 }
 
-/* Large devices (laptops/desktops, 992px and up) */
 @media screen and (min-width: 1010px) {
     body{
         min-width: 1010px;

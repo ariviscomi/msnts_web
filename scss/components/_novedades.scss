@@ -1,32 +1,32 @@
 .latest{
-
-    width: 100%;
-
+    height: max-content;
+    max-width: calc(100vw - 1rem);
     color: white;
 
     display: grid;
-    grid-template-columns: 1fr 0.5fr 1fr;
-    grid-template-rows: 0.5fr 1fr 1fr;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: 0.5fr repeat(2,1fr);
 
-    grid-column-gap: 20px;
-    grid-row-gap: 10px;
+    grid-column-gap: 2rem;
+    grid-row-gap: 1rem;
 
     grid-template-areas:
 
-    "ntitle ntitle ntitle"
-    "ndesc ndesc nimg"
-    "nlink nlink nimg"
+    "ntitle ntitle"
+    "ndesc nimg"
+    "nlink nimg"
     ;
     
     .n_title{
         grid-area: ntitle;
+        padding: 0 0.8rem;
     }
     
     .n_desc{
-        padding: 20px;
+        padding: 2rem;
         background-color: #00000080;
-        border-radius: 20px;
-        font-size: 20px;
+        border-radius: 2rem;
+        font-size: 2rem;
     
         flex-direction: column;
     
@@ -36,7 +36,17 @@
     }
     
     .n_img{
+        justify-content: center;
+        align-items: center;
         grid-area: nimg;
+        overflow: hidden;
+
+        iframe{
+            height: 30rem;
+            width: 55rem;
+            max-width: 550px;
+            max-height: 300px;
+        }
     }
     
     .n_link{
