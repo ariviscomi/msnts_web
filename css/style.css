@@ -352,9 +352,13 @@ p, a {
   display: none;
 }
 #homePage #index {
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+  overflow-block: initial;
   position: absolute;
   z-index: 4;
-  width: calc(100vw - 1.67rem);
+  width: 100vw;
   height: 100vh;
   --animation-duration:3.5s;
   padding: 0;
@@ -366,8 +370,7 @@ p, a {
 #homePage #index .indexVideo {
   position: absolute;
   z-index: 5;
-  height: auto;
-  width: 100vw;
+  height: 100vh;
 }
 #homePage #index .swipeContainer {
   position: absolute;
@@ -563,11 +566,6 @@ footer .fondo a {
   body header div {
     display: flex;
     justify-content: center;
-  }
-  body #index {
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
   }
 }
 /* Large devices (laptops/desktops, 992px and up) */

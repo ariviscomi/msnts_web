@@ -6,10 +6,14 @@
     
 
     #index{
-        
+        display: flex;
+        justify-content: center;
+        overflow:hidden;
+        overflow-block:initial;
+
         position: absolute;
         z-index: 4;
-        width: calc(100vw - 1.67rem);
+        width: calc(100vw);
         height:calc(100vh);
         --animation-duration:3.5s;
     
@@ -24,8 +28,7 @@
         .indexVideo{
             position: absolute;
             z-index: 5;
-            height:auto;
-            width: calc(100vw);
+            height:calc(100vh);
         }
         
         .swipeContainer{
