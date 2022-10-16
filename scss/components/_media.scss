@@ -1,54 +1,72 @@
-.d_title{
-    font-size: 24px;
-    text-shadow: 1px 1px 10px #050000;
-    font-style: ligth;
-
-    grid-area: dtitle;
-}
-
-.d_iframe{
-    grid-area: difr;
-}
-
-.d_desc{
-    grid-area: ddesc;
-}
-
-.d_album{
-    grid-area: dalbum;
-}
-
-p, a{
-    font-size: 1.6rem;
-}
-
 #videos{
 
-    margin: 5px;
+    padding: 0.5rem;
     color: white;
     font-family:'Roboto Condensed';
 
-    display: flex;
-    flex-direction: row;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 1rem;
+
+    grid-template-areas:
+    "vtitle vtitle"
+    "va1 va2"
+    ;
+
+    .title{
+        grid-area: vtitle;
+    }
+
+    .vAside1{
+        grid-area: va1;
+    }
+
+    .vAside2{
+        grid-area: va2;
+    }
     
     .vid{
         padding:0px;
         border: #000000 1px solid;
-        border-radius: 5px;
-        width: 50%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+        border-radius: 2px;
         
-        span{
-            width: 100%;
+        display: grid;
+        grid-template-rows: auto auto 1fr;
+
+        grid-template-areas:
+        
+        "vtit"
+        "vvid"
+        "vdesc"
+        ;
+
+
+        .title{
+            grid-area: vtit;
         }
         
-        div{
-            border-radius: 10px;
-            padding: 10px;
-            margin: 0 10px;
+        .vVideo{
+            grid-area: vvid;
+            height: auto;
+            padding: 0;
+
+            iframe{
+                width: 100%;
+                aspect-ratio: 16 / 9;
+            }
+        }
+
+        .vDesc{
+
+            grid-area: vdesc;
+
+
+            padding: 1.5rem;
             background-color: #0000008c;
+
+            p, a{
+                font-size: medium;
+            }
         }
     }
 }

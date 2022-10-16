@@ -15,6 +15,7 @@ html ::-webkit-scrollbar {
 body {
   display: grid;
   grid-template-rows: auto 1fr auto;
+  grid-template-columns: 1fr;
   min-height: 100vh;
   max-width: 100%;
   font-family: "Roboto Condensed";
@@ -25,6 +26,7 @@ body main {
   display: grid;
   grid-template-rows: auto 1fr auto;
   justify-content: center;
+  align-items: center;
 }
 body main .title {
   display: flex;
@@ -36,8 +38,10 @@ body main .title {
   background-position: center;
   background-size: cover;
   border: 1px solid #1d1d1b;
+  padding: 0.1rem 0.8rem;
   height: max-content;
-  width: calc(100vw - 1rem);
+  width: 100%;
+  font-size: 4rem;
 }
 body main .title h2 {
   text-shadow: 1px 1px 20px #bd1818;
@@ -100,50 +104,37 @@ body a span:hover {
 .notPage {
   height: 50rem;
   padding: 1% 5%;
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(4, auto);
   justify-content: center;
   align-items: center;
 }
 .notPage div {
+  display: flex;
+  justify-content: center;
   text-shadow: 1px 1px 20px white;
   padding: 1rem;
   margin: 1rem;
 }
 
-@keyframes bgnGradient {
-  0% {
-    background-position: 0% 25%;
-  }
-  25% {
-    background-position: 25% 50%;
-  }
-  50% {
-    background-position: 50% 100%;
-  }
-  75% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 50% 25%;
-  }
-}
-main .section_form {
-  display: flex;
+.section_form {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
-  height: 90vh;
 }
-main .section_form .block_form {
-  padding: 2rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  height: 80%;
-  width: 40vw;
+.section_form .block_form {
+  padding: 2rem 1.5rem;
+  margin: 2.5rem 1rem;
+  height: calc(100% - 2rem);
   font-size: 2.2rem;
+  display: grid;
+  grid-template-rows: auto auto;
+  grid-template-columns: 1fr;
+  justify-content: center;
+  align-items: center;
   border: 1px solid rgba(29, 29, 27, 0.5);
   background-color: #1d1d1b;
   background-image: url("../images/fondo.gif");
@@ -151,32 +142,57 @@ main .section_form .block_form {
   background-repeat: repeat-y;
   box-shadow: 1px 2px 20px black;
 }
-main .section_form .block_form form ul li {
+.section_form .block_form div {
   display: flex;
-  align-items: flex-start;
   flex-direction: column;
-  width: calc(100% - 2rem);
+  justify-content: center;
+  align-items: center;
+}
+.section_form .block_form form {
+  height: 100%;
+}
+.section_form .block_form form ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100%;
+}
+.section_form .block_form form ul li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
 
 .fecha {
-  height: 380px;
+  height: max-content;
+  margin: 1rem 0;
+  padding-bottom: 1rem;
+  border-bottom: 1px #1d1d1b solid;
   display: grid;
-  grid-template-columns: 1fr 0.5fr 1fr;
-  grid-template-rows: 0.5fr 1fr 1fr;
-  grid-template-areas: "gtitle gtitle gtitle" "gtext gtext gmap" "gbtn gbtn gmap";
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: auto 1fr auto;
+  row-gap: 0.5rem;
+  grid-template-areas: "gtitle gtitle" "gtext gmap" "gtext gbtn";
 }
 .fecha .g_title {
   grid-area: gtitle;
-  font-size: 30px;
 }
 .fecha .g_map {
   grid-area: gmap;
+}
+.fecha .g_map iframe {
+  width: auto;
+  max-height: 28.1rem;
+  max-width: 50rem;
+  aspect-ratio: 16/9;
 }
 .fecha .g_btn {
   grid-area: gbtn;
 }
 .fecha .g_text {
-  padding: 20px;
+  padding: 2rem 1rem;
   background-color: rgba(0, 0, 0, 0.5019607843);
   border-radius: 20px;
   font-size: 20px;
@@ -185,6 +201,7 @@ main .section_form .block_form form ul li {
   grid-area: gtext;
 }
 .fecha .g_text p {
+  text-align: left;
   font-size: 20px;
   width: 50%;
 }
@@ -195,53 +212,51 @@ main .section_form .block_form form ul li {
   justify-content: center;
 }
 
-.d_title {
-  font-size: 24px;
-  text-shadow: 1px 1px 10px #050000;
-  font-style: ligth;
-  grid-area: dtitle;
-}
-
-.d_iframe {
-  grid-area: difr;
-}
-
-.d_desc {
-  grid-area: ddesc;
-}
-
-.d_album {
-  grid-area: dalbum;
-}
-
-p, a {
-  font-size: 1.6rem;
-}
-
 #videos {
-  margin: 5px;
+  padding: 0.5rem;
   color: white;
   font-family: "Roboto Condensed";
-  display: flex;
-  flex-direction: row;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 1rem;
+  grid-template-areas: "vtitle vtitle" "va1 va2";
+}
+#videos .title {
+  grid-area: vtitle;
+}
+#videos .vAside1 {
+  grid-area: va1;
+}
+#videos .vAside2 {
+  grid-area: va2;
 }
 #videos .vid {
   padding: 0px;
   border: #000000 1px solid;
-  border-radius: 5px;
-  width: 50%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  border-radius: 2px;
+  display: grid;
+  grid-template-rows: auto auto 1fr;
+  grid-template-areas: "vtit" "vvid" "vdesc";
 }
-#videos .vid span {
+#videos .vid .title {
+  grid-area: vtit;
+}
+#videos .vid .vVideo {
+  grid-area: vvid;
+  height: auto;
+  padding: 0;
+}
+#videos .vid .vVideo iframe {
   width: 100%;
+  aspect-ratio: 16/9;
 }
-#videos .vid div {
-  border-radius: 10px;
-  padding: 10px;
-  margin: 0 10px;
+#videos .vid .vDesc {
+  grid-area: vdesc;
+  padding: 1.5rem;
   background-color: rgba(0, 0, 0, 0.5490196078);
+}
+#videos .vid .vDesc p, #videos .vid .vDesc a {
+  font-size: medium;
 }
 
 #banda .theBand {
@@ -253,7 +268,7 @@ p, a {
 #banda .theBand .bandImg {
   display: flex;
   justify-content: center;
-  width: 90vw;
+  width: 99vw;
 }
 #banda .theBand .bandImg img {
   width: 100%;
@@ -261,23 +276,24 @@ p, a {
 #banda .theBand .bandText {
   position: relative;
   bottom: 10rem;
-  width: 90vw;
+  width: 99vw;
   background-color: rgba(0, 0, 0, 0.5215686275);
 }
 #banda .theBand .bandText p {
+  font-size: 2rem;
   text-align: center;
   text-justify: auto;
   padding: 2.5rem;
 }
 
-#galeria, #miembros, #banda {
+#miembros, #banda {
   width: 100vw;
   display: grid;
   grid-template-rows: auto 1fr;
   row-gap: 2rem;
 }
 
-#galeria img, #miembros img, #banda img {
+#miembros img, #banda img {
   border: 1px solid black;
   box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.801);
 }
@@ -293,7 +309,7 @@ p, a {
 }
 #miembros a {
   color: white;
-  font-size: 10px;
+  font-size: 1rem;
 }
 #miembros a :hover {
   color: #ffffff;
@@ -313,6 +329,7 @@ p, a {
 #miembros .miembros .ale, #miembros .miembros .ari, #miembros .miembros .caio, #miembros .miembros .rulo, #miembros .miembros .tirri, #miembros .miembros .vero {
   background: linear-gradient(-162deg, rgba(29, 29, 27, 0.5) 1%, rgba(189, 24, 24, 0.5) 50%, rgba(29, 29, 27, 0.5) 100%);
   box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.801);
+  padding: 0.5rem;
   display: grid;
   grid-template-rows: auto 1fr auto;
   justify-content: center;
@@ -348,7 +365,6 @@ p, a {
 
 .latest {
   height: max-content;
-  max-width: calc(100vw - 1rem);
   color: white;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -359,7 +375,6 @@ p, a {
 }
 .latest .n_title {
   grid-area: ntitle;
-  padding: 0 0.8rem;
 }
 .latest .n_desc {
   padding: 2rem;
@@ -377,10 +392,10 @@ p, a {
   overflow: hidden;
 }
 .latest .n_img iframe {
-  height: 30rem;
-  width: 55rem;
-  max-width: 550px;
-  max-height: 300px;
+  height: 28.1rem;
+  width: 50rem;
+  max-height: 28.1rem;
+  max-width: 50rem;
 }
 .latest .n_link {
   grid-area: nlink;
@@ -468,13 +483,13 @@ header .burger {
 header .burger ul {
   position: absolute;
   left: 0;
-  height: 99vh;
-  width: 33.3vw;
+  height: 100vh;
+  width: 45vw;
   display: none;
   padding: 0;
   background: #1d1d1b;
 }
-header .burger ul li {
+header .burger ul .navItem {
   display: block;
   margin: 0;
   padding: 1rem;
@@ -484,7 +499,6 @@ header .burger ul li {
 header .burger ul .about {
   position: absolute;
   bottom: 0;
-  font-size: 2px !important;
   border-top: 1px solid rgba(0, 0, 0, 0.5);
 }
 header .burger input:checked ~ ul {
@@ -553,17 +567,16 @@ footer .fondo a {
 }
 
 @media screen and (max-width: 600px) {
-  html {
-    font-size: 50%;
-  }
   html body {
     max-width: 600px;
   }
+  html body .latest .g_map {
+    max-width: 550px;
+    width: auto;
+    aspect-ratio: 16/9;
+  }
 }
 @media screen and (max-width: 761px) {
-  html {
-    font-size: 56%;
-  }
   html body {
     max-width: 760px;
   }
@@ -592,8 +605,30 @@ footer .fondo a {
     grid-template-rows: repeat(6, 1fr);
     grid-template-areas: "rulo" "vero" "ale" "tirri" "ari" "caio";
   }
+  html body main {
+    grid-template-rows: 1fr;
+    height: 100%;
+    background-color: transparent;
+  }
+  html body main .home_main {
+    height: 100%;
+  }
+  html body main .home_main .banner_h {
+    display: none;
+  }
+  html body main .home_main .banner_h #carousel2, html body main .home_main .banner_h .carousel-inner, html body main .home_main .banner_h .carousel-item {
+    aspect-ratio: 9/16;
+    width: auto;
+    height: 100%;
+  }
+  html body #videos {
+    grid-template-columns: auto;
+    grid-template-rows: repeat(3, auto);
+    column-gap: 0rem;
+    row-gap: 1rem;
+    grid-template-areas: "vtitle" "va1" "va2";
+  }
   html body footer .fondo {
-    font-size: 50%;
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 0.2fr;
@@ -612,10 +647,13 @@ footer .fondo a {
 }
 /* Intercambio de logo */
 @media screen and (min-width: 761px) {
-  header .header_logoSmall {
+  body header .header_logoSmall {
     display: none;
   }
-  header .burger {
+  body header .burger {
+    display: none;
+  }
+  body .home_main .banner_v {
     display: none;
   }
 }
@@ -637,19 +675,39 @@ footer .fondo a {
     justify-content: center;
   }
   body .home_main #carousel, body .home_main .carousel-inner, body .home_main .carousel-item {
-    max-width: calc(100vw - 5rem);
+    max-width: calc(100vw - 10rem);
     height: auto;
   }
   body .latest {
     height: max-content;
     grid-template-columns: 1fr;
-    grid-template-rows: auto auto auto;
+    grid-template-rows: repeat(4, auto);
     grid-template-areas: "ntitle" "nimg" "ndesc" "nlink";
+  }
+  body .latest .g_map {
+    max-width: calc(95vw - 1rem);
+    aspect-ratio: 16/9;
+  }
+  body .fecha {
+    padding: 0.5rem;
+    height: max-content;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, auto);
+    justify-content: center;
+    align-items: center;
+    grid-template-areas: "gtitle" "gtext" "gmap" "gbtn";
+  }
+  body #banda .theBand .bandText {
+    bottom: 0;
+    width: 100vw;
   }
   body #miembros .miembros {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(3, 1fr);
     grid-template-areas: "rulo vero" "ale tirri" "ari caio";
+  }
+  body .formLogo {
+    display: none;
   }
 }
 @media screen and (min-width: 1010px) {
@@ -658,11 +716,17 @@ footer .fondo a {
   }
   body #index {
     min-width: 100vw;
-    min-height: 100vh;
   }
   body #index .indexVideo {
-    height: 100%;
     min-width: 100%;
+  }
+  body .section_form {
+    display: flex;
+    justify-content: center;
+  }
+  body .section_form .block_form {
+    width: 50%;
+    height: 90%;
   }
 }
 

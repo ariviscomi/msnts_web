@@ -1,43 +1,61 @@
-main{
-    .section_form{
-        display: flex;
+.section_form{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    justify-content: center;
+    align-items: center;
+
+    .block_form{
+
+        padding:2rem 1.5rem;
+        margin: 2.5rem 1rem;
+
+        height: calc(100% - 2rem);
+        font-size: 2.2rem;
+
+        display: grid;
+        grid-template-rows: auto auto;
+        grid-template-columns: 1fr;
+
         justify-content: center;
         align-items: center;
-        flex-direction: column;
 
-        height: 90vh;
+        border: 1px solid nth($paletaOp, 1);
+        background-color: nth($paleta, 1);
+        background-image: url("../images/fondo.gif");
+        background-size:contain;
+        background-repeat: repeat-y;
+        box-shadow: 1px 2px 20px black;
 
-        .block_form{
-            padding:2rem;
-
+        div{
             display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
-            flex-direction: column;
+        }
 
-            height: 80%;
-            width: 40vw;
+        form{
+            
+            height: 100%;
+            
+            
+            ul{
+                display: flex;
+                align-items:center;
+                justify-content: center;
+                flex-direction: column;
+                height: 100%;
 
-            font-size: 2.2rem;
-
-            border: 1px solid nth($paletaOp, 1);
-            background-color: nth($paleta, 1);
-            background-image: url("../images/fondo.gif");
-            background-size: contain;
-            background-repeat: repeat-y;
-            box-shadow: 1px 2px 20px black;
-
-            form{
-                ul{
-                    li {
-                        display: flex;
-                        align-items:flex-start;
-                        flex-direction: column;
-                        width: calc(100% - 2rem);
-                    }
+                li {
+                    display: flex;
+                    align-items:center;
+                    justify-content: center;
+                    flex-direction: column;
+                    
                 }
             }
         }
 
     }
+
 }

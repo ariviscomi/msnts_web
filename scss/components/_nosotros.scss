@@ -11,7 +11,7 @@
         .bandImg{
             display: flex;
             justify-content: center;
-            width: 90vw;
+            width: 99vw;
 
             img{
                 width: 100%;
@@ -22,10 +22,11 @@
             position: relative;
             bottom: 10rem;
 
-            width: 90vw;
+            width: 99vw;
             background-color: #00000085;
             
             p{
+                font-size: 2rem;
                 text-align: center;
                 text-justify: auto;
                 padding: 2.5rem;
@@ -34,14 +35,14 @@
     }
 }
 
-#galeria, #miembros, #banda{
+#miembros, #banda{
     width: 100vw;
     display: grid;
     grid-template-rows: auto 1fr;
     row-gap: 2rem;
 }
 
-#galeria img, #miembros img, #banda img{
+#miembros img, #banda img{
     border: 1px solid black;
     box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.801);
 }
@@ -59,7 +60,7 @@
 
     a{
         color: white;
-        font-size: 10px;
+        font-size: 1rem;
 
         :hover{
             color: nth($paleta, 6);
@@ -88,7 +89,8 @@
 
             background: linear-gradient(-162deg, nth($paletaOp,1) 1%, nth($paletaOp,4) 50%, nth($paletaOp,1) 100%);
             box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.801);
-            
+            padding: 0.5rem;
+
             display:grid;
             grid-template-rows: auto 1fr auto;
             justify-content: center;

@@ -1,6 +1,6 @@
 .latest{
     height: max-content;
-    max-width: calc(100vw - 1rem);
+
     color: white;
 
     display: grid;
@@ -19,7 +19,6 @@
     
     .n_title{
         grid-area: ntitle;
-        padding: 0 0.8rem;
     }
     
     .n_desc{
@@ -42,10 +41,11 @@
         overflow: hidden;
 
         iframe{
-            height: 30rem;
-            width: 55rem;
-            max-width: 550px;
-            max-height: 300px;
+            height: 28.1rem;
+            width: 50rem;
+            
+            max-height: 28.1rem;
+            max-width: 50rem;
         }
     }
     

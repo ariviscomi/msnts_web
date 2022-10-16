@@ -23,27 +23,28 @@ header {
   .burger {
     position: absolute;
     left: 0.2rem;
+
     ul {
       position: absolute;
       left: 0;
-      height: 99vh;
-      width: 33.3vw;
+      height: 100vh;
+      width: 45vw;
       display: none;
       padding: 0;
       background: nth($paleta, 1);
 
-      li {
+      .navItem{
         display: block;
         margin: 0;
         padding: 1rem;
         list-style: none;
         border-bottom: 1px solid black;
+        
       }
 
       .about{
         position: absolute;
         bottom: 0;
-        font-size: 2px !important;
         border-top: 1px solid rgba(0, 0, 0, 0.5);
       }
     }

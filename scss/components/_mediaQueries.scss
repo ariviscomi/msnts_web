@@ -1,10 +1,19 @@
 
 @media screen and (max-width: 600px) {
     html{
-        font-size: 50%;
 
         body{
             max-width: 600px;
+
+            .latest {
+    
+                .g_map{
+                    max-width: 550px;
+
+                    width: auto;    
+                    aspect-ratio: 16 / 9;
+                }
+            }
         }
     }
 }
@@ -12,7 +21,6 @@
 @media screen and (max-width: 761px) {
 
     html{
-        font-size: 56%;
         body{
             max-width: 760px;
     
@@ -64,11 +72,42 @@
                     ;
                 }
             }
+
+            main{
+
+                grid-template-rows: 1fr;
+                height: 100%;
+                background-color: transparent;
+                .home_main{
+                    height: 100%;
+                    .banner_h{
+                        display: none;
+    
+                        #carousel2, .carousel-inner, .carousel-item{
+                            aspect-ratio: 9 / 16;
+                            width: auto;
+                            height: 100%;
+                        }
+                    }
+                }
+            }
+
+            #videos{
+                grid-template-columns: auto;
+                grid-template-rows: repeat(3, auto);
+                column-gap: 0rem;
+                row-gap: 1rem;
+                
+                grid-template-areas:
+                
+                "vtitle"
+                "va1" 
+                "va2"
+                ;
+            }
         
             footer{
                 .fondo{
-        
-                    font-size: 50%;
                     display: grid;
                     grid-template-columns: 1fr;
                     grid-template-rows: 1fr 0.2fr;
@@ -101,15 +140,25 @@
 /* Intercambio de logo */
 @media screen and (min-width: 761px){
 
-    header{
-        .header_logoSmall{
-            display: none;
+    body{
+        
+        header{
+            .header_logoSmall{
+                display: none;
+            }
+    
+            .burger{
+                display: none;
+            }
         }
 
-        .burger{
-            display: none;
+        .home_main{
+            .banner_v{
+                display: none;
+            }
         }
     }
+
 }
 
 @media screen and (max-width: 1000px){
@@ -117,6 +166,7 @@
     body{
 
         max-width: 1000px;
+
         header{
             grid-template-rows: repeat(2, 1fr);
             grid-template-columns: 1fr;
@@ -136,7 +186,7 @@
             justify-content: center;
 
             #carousel, .carousel-inner, .carousel-item{
-                max-width: calc(100vw - 5rem);
+                max-width: calc(100vw - 10rem);
                 height: auto;
             }
         }
@@ -144,7 +194,7 @@
         .latest {
             height: max-content;
             grid-template-columns:1fr;
-            grid-template-rows: auto auto auto;
+            grid-template-rows: repeat(4, auto);
 
             grid-template-areas:
     
@@ -153,10 +203,44 @@
                 "ndesc"
                 "nlink"
             ;
+
+            .g_map{
+                max-width: calc(95vw - 1rem);
+
+                aspect-ratio: 16 / 9;
+            }
+        }
+
+        .fecha{
+
+            padding: 0.5rem;
+            height: max-content;
+
+            grid-template-columns: 1fr;
+            grid-template-rows: repeat(4, auto);
+
+            justify-content: center;
+            align-items: center;
+
+            grid-template-areas:
+            
+            "gtitle"
+            "gtext" 
+            "gmap"
+            "gbtn"
+            ;
+        }
+
+        #banda{
+            .theBand{
+                .bandText{
+                    bottom: 0;
+                    width: 100vw;
+                }
+            }
         }
         
-        #miembros{
-            
+        #miembros{            
             .miembros {
                 grid-template-columns: repeat(2,1fr);
                 grid-template-rows: repeat(3,1fr);
@@ -168,6 +252,10 @@
                 ;
             }
         }
+
+        .formLogo{
+            display: none;
+        }
     }
 }
 
@@ -177,15 +265,26 @@
 
         #index{
             min-width: 100vw;
-            min-height: 100vh;
 
             .indexVideo{
-                height: 100%;
                 min-width: 100%;
             }
         }
+
+        .section_form{
+
+            display: flex;
+            justify-content: center;
+
+            .block_form{
+
+                width: calc(50%);
+                height: calc(90%);
+
+            }
+        }
+
     }
 }
-
 
 

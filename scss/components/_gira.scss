@@ -1,25 +1,39 @@
 .fecha{
-    height: 380px;
+    height: max-content;
+
+    margin:1rem 0;
+    padding-bottom: 1rem;
+
+    border-bottom: 1px nth($paleta, 1) solid;
 
     display: grid;
-    grid-template-columns: 1fr 0.5fr 1fr;
-    grid-template-rows: 0.5fr 1fr 1fr;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: auto 1fr auto;
+
+    row-gap: 0.5rem;
 
     grid-template-areas:
     
-    "gtitle gtitle gtitle"
-    "gtext gtext gmap"
-    "gbtn gbtn gmap"
+    "gtitle gtitle"
+    "gtext gmap"
+    "gtext gbtn"
     ;
 
     .g_title{   
         grid-area: gtitle;
-    
-        font-size: 30px;
     }
     
     .g_map{
         grid-area: gmap;
+
+        iframe{
+            width: auto;
+            
+            max-height: 28.1rem;
+            max-width: 50rem;
+
+            aspect-ratio: 16 / 9;
+        }
     }
     
     .g_btn{   
@@ -27,7 +41,7 @@
     }
     
     .g_text{
-        padding: 20px;
+        padding: 2rem 1rem;
         background-color: #00000080;
         border-radius: 20px;
         font-size: 20px;
@@ -39,6 +53,7 @@
         grid-area: gtext;
         
         p{
+            text-align: left;
             font-size: 20px;
             width: 50%;
         }
